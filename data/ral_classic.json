@@ -1,0 +1,1929 @@
+{
+ "system": "RAL Classic",
+ "source_urls": [
+  "https://www.w3schools.com/colors/colors_ral.asp"
+ ],
+ "illuminant": "D65",
+ "observer": "2",
+ "note": "Hex values from w3schools RAL table; CIELAB derived via sRGB -> XYZ (D65,2deg) -> Lab. 213 codes collected; official RAL Classic is commonly cited as 216 (a few codes not published with hex here).",
+ "count": 213,
+ "colors": [
+  {
+   "code": "RAL 1000",
+   "name": "Green beige",
+   "hex": "#CCC58F",
+   "L": 78.9,
+   "a": -5.9,
+   "b": 28.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1001",
+   "name": "Beige",
+   "hex": "#D1BC8A",
+   "L": 76.9,
+   "a": 0.1,
+   "b": 28.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1002",
+   "name": "Sand yellow",
+   "hex": "#D2B773",
+   "L": 75.3,
+   "a": 0.6,
+   "b": 38.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1003",
+   "name": "Signal yellow",
+   "hex": "#F7BA0B",
+   "L": 79.0,
+   "a": 9.7,
+   "b": 80.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1004",
+   "name": "Golden yellow",
+   "hex": "#E2B007",
+   "L": 74.3,
+   "a": 5.8,
+   "b": 76.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1005",
+   "name": "Honey yellow",
+   "hex": "#C89F04",
+   "L": 67.3,
+   "a": 3.3,
+   "b": 70.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1006",
+   "name": "Maize yellow",
+   "hex": "#E1A100",
+   "L": 70.5,
+   "a": 13.2,
+   "b": 74.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1007",
+   "name": "Daffodil yellow",
+   "hex": "#E79C00",
+   "L": 70.0,
+   "a": 18.5,
+   "b": 74.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1011",
+   "name": "Brown beige",
+   "hex": "#AF8A54",
+   "L": 59.8,
+   "a": 7.3,
+   "b": 34.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1012",
+   "name": "Lemon yellow",
+   "hex": "#D9C022",
+   "L": 77.6,
+   "a": -6.0,
+   "b": 73.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1013",
+   "name": "Oyster white",
+   "hex": "#E9E5CE",
+   "L": 90.7,
+   "a": -2.5,
+   "b": 11.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1014",
+   "name": "Ivory",
+   "hex": "#DFCEA1",
+   "L": 83.1,
+   "a": -0.9,
+   "b": 24.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1015",
+   "name": "Light ivory",
+   "hex": "#EADEBD",
+   "L": 88.6,
+   "a": -1.2,
+   "b": 17.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1016",
+   "name": "Sulfur yellow",
+   "hex": "#EAF044",
+   "L": 91.8,
+   "a": -21.5,
+   "b": 77.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1017",
+   "name": "Saffron yellow",
+   "hex": "#F4B752",
+   "L": 78.3,
+   "a": 12.1,
+   "b": 58.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1018",
+   "name": "Zinc yellow",
+   "hex": "#F3E03B",
+   "L": 88.3,
+   "a": -10.4,
+   "b": 77.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1019",
+   "name": "Grey beige",
+   "hex": "#A4957D",
+   "L": 62.4,
+   "a": 1.6,
+   "b": 14.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1020",
+   "name": "Olive yellow",
+   "hex": "#9A9464",
+   "L": 60.8,
+   "a": -5.4,
+   "b": 26.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1021",
+   "name": "Rape yellow",
+   "hex": "#EEC900",
+   "L": 81.8,
+   "a": -2.1,
+   "b": 82.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1023",
+   "name": "Traffic yellow",
+   "hex": "#F0CA00",
+   "L": 82.3,
+   "a": -1.7,
+   "b": 83.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1024",
+   "name": "Ochre yellow",
+   "hex": "#B89C50",
+   "L": 65.4,
+   "a": 1.0,
+   "b": 43.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1026",
+   "name": "Luminous yellow",
+   "hex": "#F5FF00",
+   "L": 96.4,
+   "a": -25.6,
+   "b": 93.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1027",
+   "name": "Curry",
+   "hex": "#A38C15",
+   "L": 58.6,
+   "a": -2.8,
+   "b": 59.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1028",
+   "name": "Melon yellow",
+   "hex": "#FFAB00",
+   "L": 76.3,
+   "a": 20.8,
+   "b": 79.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1032",
+   "name": "Broom yellow",
+   "hex": "#DDB20F",
+   "L": 74.3,
+   "a": 2.6,
+   "b": 75.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1033",
+   "name": "Dahlia yellow",
+   "hex": "#FAAB21",
+   "L": 75.8,
+   "a": 19.1,
+   "b": 74.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1034",
+   "name": "Pastel yellow",
+   "hex": "#EDAB56",
+   "L": 74.7,
+   "a": 15.8,
+   "b": 52.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1035",
+   "name": "Pearl beige",
+   "hex": "#A29985",
+   "L": 63.5,
+   "a": -0.1,
+   "b": 11.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1036",
+   "name": "Pearl gold",
+   "hex": "#927549",
+   "L": 51.1,
+   "a": 5.5,
+   "b": 28.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 1037",
+   "name": "Sun yellow",
+   "hex": "#EEA205",
+   "L": 72.3,
+   "a": 18.4,
+   "b": 75.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 2000",
+   "name": "Yellow orange",
+   "hex": "#DD7907",
+   "L": 60.8,
+   "a": 32.9,
+   "b": 66.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 2001",
+   "name": "Red orange",
+   "hex": "#BE4E20",
+   "L": 47.6,
+   "a": 42.7,
+   "b": 47.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 2002",
+   "name": "Vermillion",
+   "hex": "#C63927",
+   "L": 45.7,
+   "a": 54.7,
+   "b": 42.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 2003",
+   "name": "Pastel orange",
+   "hex": "#FA842B",
+   "L": 67.3,
+   "a": 39.5,
+   "b": 63.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 2004",
+   "name": "Pure orange",
+   "hex": "#E75B12",
+   "L": 56.6,
+   "a": 51.5,
+   "b": 62.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 2005",
+   "name": "Luminous orange",
+   "hex": "#FF2300",
+   "L": 54.5,
+   "a": 76.4,
+   "b": 67.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 2007",
+   "name": "Luminous bright orange",
+   "hex": "#FFA421",
+   "L": 74.8,
+   "a": 24.9,
+   "b": 73.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 2008",
+   "name": "Bright red orange",
+   "hex": "#F3752C",
+   "L": 63.3,
+   "a": 44.3,
+   "b": 59.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 2009",
+   "name": "Traffic orange",
+   "hex": "#E15501",
+   "L": 54.6,
+   "a": 51.8,
+   "b": 64.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 2010",
+   "name": "Signal orange",
+   "hex": "#D4652F",
+   "L": 55.6,
+   "a": 40.4,
+   "b": 49.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 2011",
+   "name": "Deep orange",
+   "hex": "#EC7C25",
+   "L": 63.7,
+   "a": 37.9,
+   "b": 62.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 2012",
+   "name": "Salmon orange",
+   "hex": "#DB6A50",
+   "L": 58.0,
+   "a": 42.2,
+   "b": 35.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 2013",
+   "name": "Pearl orange",
+   "hex": "#954527",
+   "L": 39.2,
+   "a": 31.5,
+   "b": 33.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3000",
+   "name": "Flame red",
+   "hex": "#AB2524",
+   "L": 38.0,
+   "a": 53.0,
+   "b": 35.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3001",
+   "name": "Signal red",
+   "hex": "#A02128",
+   "L": 35.4,
+   "a": 51.0,
+   "b": 29.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3002",
+   "name": "Carmine red",
+   "hex": "#A1232B",
+   "L": 35.9,
+   "a": 50.9,
+   "b": 27.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3003",
+   "name": "Ruby red",
+   "hex": "#8D1D2C",
+   "L": 31.2,
+   "a": 46.7,
+   "b": 20.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3004",
+   "name": "Purple red",
+   "hex": "#701F29",
+   "L": 25.5,
+   "a": 36.2,
+   "b": 14.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3005",
+   "name": "Wine red",
+   "hex": "#5E2028",
+   "L": 22.2,
+   "a": 29.0,
+   "b": 9.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3007",
+   "name": "Black red",
+   "hex": "#402225",
+   "L": 17.3,
+   "a": 14.8,
+   "b": 4.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3009",
+   "name": "Oxide red",
+   "hex": "#703731",
+   "L": 30.4,
+   "a": 24.5,
+   "b": 15.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3011",
+   "name": "Brown red",
+   "hex": "#7E292C",
+   "L": 29.9,
+   "a": 36.9,
+   "b": 18.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3012",
+   "name": "Beige red",
+   "hex": "#CB8D73",
+   "L": 64.2,
+   "a": 20.4,
+   "b": 23.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3013",
+   "name": "Tomato red",
+   "hex": "#9C322E",
+   "L": 37.0,
+   "a": 43.7,
+   "b": 27.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3014",
+   "name": "Antique pink",
+   "hex": "#D47479",
+   "L": 59.8,
+   "a": 38.0,
+   "b": 14.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3015",
+   "name": "Light pink",
+   "hex": "#E1A6AD",
+   "L": 73.7,
+   "a": 22.7,
+   "b": 5.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3016",
+   "name": "Coral red",
+   "hex": "#AC4034",
+   "L": 42.3,
+   "a": 43.5,
+   "b": 30.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3017",
+   "name": "Rose",
+   "hex": "#D3545F",
+   "L": 53.0,
+   "a": 50.9,
+   "b": 20.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3018",
+   "name": "Strawberry red",
+   "hex": "#D14152",
+   "L": 49.4,
+   "a": 57.3,
+   "b": 22.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3020",
+   "name": "Traffic red",
+   "hex": "#C1121C",
+   "L": 41.0,
+   "a": 63.3,
+   "b": 43.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3022",
+   "name": "Salmon pink",
+   "hex": "#D56D56",
+   "L": 57.8,
+   "a": 38.8,
+   "b": 31.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3024",
+   "name": "Luminous red",
+   "hex": "#F70000",
+   "L": 51.6,
+   "a": 78.2,
+   "b": 65.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3026",
+   "name": "Luminous bright red",
+   "hex": "#FF0000",
+   "L": 53.2,
+   "a": 80.1,
+   "b": 67.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3027",
+   "name": "Raspberry red",
+   "hex": "#B42041",
+   "L": 39.8,
+   "a": 58.4,
+   "b": 19.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3028",
+   "name": "Pure red",
+   "hex": "#E72512",
+   "L": 49.9,
+   "a": 69.8,
+   "b": 58.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3031",
+   "name": "Orient red",
+   "hex": "#AC323B",
+   "L": 40.2,
+   "a": 49.8,
+   "b": 23.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3032",
+   "name": "Pearl ruby red",
+   "hex": "#711521",
+   "L": 24.2,
+   "a": 39.8,
+   "b": 17.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 3033",
+   "name": "Pearl pink",
+   "hex": "#B24C43",
+   "L": 45.7,
+   "a": 40.9,
+   "b": 26.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 4001",
+   "name": "Red lilac",
+   "hex": "#8A5A83",
+   "L": 44.7,
+   "a": 26.6,
+   "b": -14.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 4002",
+   "name": "Red violet",
+   "hex": "#933D50",
+   "L": 38.1,
+   "a": 38.1,
+   "b": 6.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 4003",
+   "name": "Heather violet",
+   "hex": "#D15B8F",
+   "L": 55.1,
+   "a": 51.9,
+   "b": -5.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 4004",
+   "name": "Claret violet",
+   "hex": "#691639",
+   "L": 23.2,
+   "a": 38.9,
+   "b": -0.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 4005",
+   "name": "Blue lilac",
+   "hex": "#83639D",
+   "L": 47.2,
+   "a": 24.5,
+   "b": -26.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 4006",
+   "name": "Traffic purple",
+   "hex": "#992572",
+   "L": 36.6,
+   "a": 54.2,
+   "b": -16.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 4007",
+   "name": "Purple violet",
+   "hex": "#4A203B",
+   "L": 19.2,
+   "a": 23.9,
+   "b": -8.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 4008",
+   "name": "Signal violet",
+   "hex": "#904684",
+   "L": 41.2,
+   "a": 39.9,
+   "b": -20.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 4009",
+   "name": "Pastel violet",
+   "hex": "#A38995",
+   "L": 59.8,
+   "a": 11.9,
+   "b": -2.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 4010",
+   "name": "Telemagenta",
+   "hex": "#C63678",
+   "L": 47.0,
+   "a": 61.2,
+   "b": -3.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 4011",
+   "name": "Pearl violet",
+   "hex": "#8773A1",
+   "L": 51.8,
+   "a": 17.2,
+   "b": -21.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 4012",
+   "name": "Pearl blackberry",
+   "hex": "#6B6880",
+   "L": 45.1,
+   "a": 6.5,
+   "b": -12.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5000",
+   "name": "Violet blue",
+   "hex": "#384C70",
+   "L": 32.2,
+   "a": 3.2,
+   "b": -23.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5001",
+   "name": "Green blue",
+   "hex": "#1F4764",
+   "L": 28.7,
+   "a": -3.8,
+   "b": -21.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5002",
+   "name": "Ultramarine blue",
+   "hex": "#2B2C7C",
+   "L": 22.9,
+   "a": 26.1,
+   "b": -45.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5003",
+   "name": "Sapphire blue",
+   "hex": "#2A3756",
+   "L": 23.3,
+   "a": 4.4,
+   "b": -20.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5004",
+   "name": "Black blue",
+   "hex": "#1D1F2A",
+   "L": 12.0,
+   "a": 2.2,
+   "b": -7.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5005",
+   "name": "Signal blue",
+   "hex": "#154889",
+   "L": 30.9,
+   "a": 8.9,
+   "b": -40.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5007",
+   "name": "Brilliant blue",
+   "hex": "#41678D",
+   "L": 42.4,
+   "a": -1.9,
+   "b": -25.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5008",
+   "name": "Grey blue",
+   "hex": "#313C48",
+   "L": 24.8,
+   "a": -1.2,
+   "b": -8.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5009",
+   "name": "Azure blue",
+   "hex": "#2E5978",
+   "L": 36.1,
+   "a": -4.8,
+   "b": -22.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5010",
+   "name": "Gentian blue",
+   "hex": "#13447C",
+   "L": 28.7,
+   "a": 6.0,
+   "b": -36.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5011",
+   "name": "Steel blue",
+   "hex": "#232C3F",
+   "L": 18.0,
+   "a": 2.0,
+   "b": -13.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5012",
+   "name": "Light blue",
+   "hex": "#3481B8",
+   "L": 51.7,
+   "a": -5.2,
+   "b": -35.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5013",
+   "name": "Cobalt blue",
+   "hex": "#232D53",
+   "L": 19.5,
+   "a": 8.4,
+   "b": -24.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5014",
+   "name": "Pigeon blue",
+   "hex": "#6C7C98",
+   "L": 51.7,
+   "a": 0.9,
+   "b": -17.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5015",
+   "name": "Sky blue",
+   "hex": "#2874B2",
+   "L": 47.2,
+   "a": -1.2,
+   "b": -39.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5017",
+   "name": "Traffic blue",
+   "hex": "#0E518D",
+   "L": 33.8,
+   "a": 3.9,
+   "b": -38.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5018",
+   "name": "Turquoise blue",
+   "hex": "#21888F",
+   "L": 51.7,
+   "a": -25.5,
+   "b": -12.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5019",
+   "name": "Capri blue",
+   "hex": "#1A5784",
+   "L": 35.4,
+   "a": -2.5,
+   "b": -30.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5020",
+   "name": "Ocean blue",
+   "hex": "#0B4151",
+   "L": 25.1,
+   "a": -10.6,
+   "b": -14.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5021",
+   "name": "Water blue",
+   "hex": "#07737A",
+   "L": 43.8,
+   "a": -23.9,
+   "b": -11.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5022",
+   "name": "Night blue",
+   "hex": "#2F2A5A",
+   "L": 20.0,
+   "a": 16.3,
+   "b": -28.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5023",
+   "name": "Distant blue",
+   "hex": "#4D668E",
+   "L": 42.8,
+   "a": 2.1,
+   "b": -24.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5024",
+   "name": "Pastel blue",
+   "hex": "#6A93B0",
+   "L": 59.0,
+   "a": -6.5,
+   "b": -19.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5025",
+   "name": "Pearl Gentian blue",
+   "hex": "#296478",
+   "L": 39.5,
+   "a": -12.4,
+   "b": -16.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 5026",
+   "name": "Pearl night blue",
+   "hex": "#102C54",
+   "L": 18.1,
+   "a": 5.6,
+   "b": -27.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6000",
+   "name": "Patina green",
+   "hex": "#327662",
+   "L": 45.0,
+   "a": -26.8,
+   "b": 4.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6001",
+   "name": "Emerald green",
+   "hex": "#28713E",
+   "L": 42.2,
+   "a": -34.8,
+   "b": 21.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6002",
+   "name": "Leaf green",
+   "hex": "#276235",
+   "L": 36.8,
+   "a": -30.2,
+   "b": 20.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6003",
+   "name": "Olive Green",
+   "hex": "#4B573E",
+   "L": 35.3,
+   "a": -9.9,
+   "b": 13.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6004",
+   "name": "Blue green",
+   "hex": "#0E4243",
+   "L": 24.9,
+   "a": -16.0,
+   "b": -5.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6005",
+   "name": "Moss green",
+   "hex": "#0F4336",
+   "L": 24.9,
+   "a": -20.6,
+   "b": 3.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6006",
+   "name": "Grey olive",
+   "hex": "#40433B",
+   "L": 27.9,
+   "a": -3.0,
+   "b": 4.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6007",
+   "name": "Bottle green",
+   "hex": "#283424",
+   "L": 20.2,
+   "a": -8.8,
+   "b": 8.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6008",
+   "name": "Brown green",
+   "hex": "#35382E",
+   "L": 22.9,
+   "a": -3.5,
+   "b": 5.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6009",
+   "name": "Fir green",
+   "hex": "#26392F",
+   "L": 22.1,
+   "a": -10.3,
+   "b": 3.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6010",
+   "name": "Grass green",
+   "hex": "#3E753B",
+   "L": 44.3,
+   "a": -31.0,
+   "b": 26.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6011",
+   "name": "Reseda green",
+   "hex": "#68825B",
+   "L": 51.5,
+   "a": -17.1,
+   "b": 18.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6012",
+   "name": "Black green",
+   "hex": "#31403D",
+   "L": 25.7,
+   "a": -6.8,
+   "b": -0.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6013",
+   "name": "Reed green",
+   "hex": "#797C5A",
+   "L": 50.9,
+   "a": -7.2,
+   "b": 18.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6014",
+   "name": "Yellow olive",
+   "hex": "#444337",
+   "L": 28.2,
+   "a": -2.0,
+   "b": 7.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6015",
+   "name": "Black olive",
+   "hex": "#3D403A",
+   "L": 26.6,
+   "a": -2.6,
+   "b": 3.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6016",
+   "name": "Turquoise green",
+   "hex": "#026A52",
+   "L": 39.5,
+   "a": -32.5,
+   "b": 6.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6017",
+   "name": "May green",
+   "hex": "#468641",
+   "L": 50.4,
+   "a": -35.2,
+   "b": 30.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6018",
+   "name": "Yellow green",
+   "hex": "#48A43F",
+   "L": 60.1,
+   "a": -47.4,
+   "b": 43.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6019",
+   "name": "Pastel green",
+   "hex": "#B7D9B1",
+   "L": 83.4,
+   "a": -18.7,
+   "b": 16.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6020",
+   "name": "Chrome green",
+   "hex": "#354733",
+   "L": 28.1,
+   "a": -11.8,
+   "b": 9.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6021",
+   "name": "Pale green",
+   "hex": "#86A47C",
+   "L": 64.2,
+   "a": -18.1,
+   "b": 17.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6022",
+   "name": "Brown olive",
+   "hex": "#3E3C32",
+   "L": 25.2,
+   "a": -1.2,
+   "b": 6.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6024",
+   "name": "Traffic green",
+   "hex": "#008754",
+   "L": 49.5,
+   "a": -44.0,
+   "b": 18.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6025",
+   "name": "Fern green",
+   "hex": "#53753C",
+   "L": 45.5,
+   "a": -23.2,
+   "b": 27.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6026",
+   "name": "Opal green",
+   "hex": "#005D52",
+   "L": 34.9,
+   "a": -26.7,
+   "b": -0.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6027",
+   "name": "Light green",
+   "hex": "#81C0BB",
+   "L": 73.5,
+   "a": -21.2,
+   "b": -3.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6028",
+   "name": "Pine green",
+   "hex": "#2D5546",
+   "L": 32.9,
+   "a": -18.2,
+   "b": 4.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6029",
+   "name": "Mint green",
+   "hex": "#007243",
+   "L": 41.9,
+   "a": -39.7,
+   "b": 18.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6032",
+   "name": "Signal green",
+   "hex": "#0F8558",
+   "L": 49.0,
+   "a": -41.4,
+   "b": 15.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6033",
+   "name": "Mint turquoise",
+   "hex": "#478A84",
+   "L": 53.1,
+   "a": -22.8,
+   "b": -3.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6034",
+   "name": "Pastel turquoise",
+   "hex": "#7FB0B2",
+   "L": 68.6,
+   "a": -15.6,
+   "b": -6.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6035",
+   "name": "Pearl green",
+   "hex": "#1B542C",
+   "L": 31.2,
+   "a": -28.6,
+   "b": 18.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6036",
+   "name": "Pearl opal green",
+   "hex": "#005D4C",
+   "L": 34.7,
+   "a": -28.5,
+   "b": 3.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6037",
+   "name": "Pure green",
+   "hex": "#25E712",
+   "L": 80.5,
+   "a": -77.7,
+   "b": 75.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 6038",
+   "name": "Luminous green",
+   "hex": "#00F700",
+   "L": 85.3,
+   "a": -84.1,
+   "b": 81.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7000",
+   "name": "Squirrel grey",
+   "hex": "#7E8B92",
+   "L": 57.1,
+   "a": -3.2,
+   "b": -5.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7001",
+   "name": "Silver grey",
+   "hex": "#8F999F",
+   "L": 62.6,
+   "a": -2.3,
+   "b": -4.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7002",
+   "name": "Olive grey",
+   "hex": "#817F68",
+   "L": 52.8,
+   "a": -3.4,
+   "b": 12.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7003",
+   "name": "Moss grey",
+   "hex": "#7A7B6D",
+   "L": 51.2,
+   "a": -3.1,
+   "b": 7.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7004",
+   "name": "Signal grey",
+   "hex": "#9EA0A1",
+   "L": 65.7,
+   "a": -0.5,
+   "b": -0.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7005",
+   "name": "Mouse grey",
+   "hex": "#6B716F",
+   "L": 47.1,
+   "a": -2.7,
+   "b": 0.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7006",
+   "name": "Beige grey",
+   "hex": "#756F61",
+   "L": 47.0,
+   "a": -0.3,
+   "b": 8.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7008",
+   "name": "Khaki grey",
+   "hex": "#746643",
+   "L": 43.7,
+   "a": 0.1,
+   "b": 21.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7009",
+   "name": "Green grey",
+   "hex": "#5B6259",
+   "L": 40.7,
+   "a": -4.6,
+   "b": 4.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7010",
+   "name": "Tarpaulin grey",
+   "hex": "#575D57",
+   "L": 38.8,
+   "a": -3.6,
+   "b": 2.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7011",
+   "name": "Iron grey",
+   "hex": "#555D61",
+   "L": 38.9,
+   "a": -2.2,
+   "b": -3.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7012",
+   "name": "Basalt grey",
+   "hex": "#596163",
+   "L": 40.5,
+   "a": -2.6,
+   "b": -2.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7013",
+   "name": "Brown-grey",
+   "hex": "#555548",
+   "L": 35.8,
+   "a": -2.6,
+   "b": 7.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7015",
+   "name": "Slate grey",
+   "hex": "#51565C",
+   "L": 36.3,
+   "a": -0.6,
+   "b": -4.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7016",
+   "name": "Anthracite grey",
+   "hex": "#373F43",
+   "L": 26.1,
+   "a": -2.3,
+   "b": -3.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7021",
+   "name": "Black grey",
+   "hex": "#2E3234",
+   "L": 20.5,
+   "a": -1.2,
+   "b": -1.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7022",
+   "name": "Umbra grey",
+   "hex": "#4B4D46",
+   "L": 32.4,
+   "a": -2.3,
+   "b": 3.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7023",
+   "name": "Concrete grey",
+   "hex": "#818479",
+   "L": 54.6,
+   "a": -3.2,
+   "b": 5.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7024",
+   "name": "Graphite grey",
+   "hex": "#474A50",
+   "L": 31.4,
+   "a": 0.2,
+   "b": -4.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7026",
+   "name": "Granite grey",
+   "hex": "#374447",
+   "L": 27.8,
+   "a": -4.4,
+   "b": -3.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7030",
+   "name": "Stone grey",
+   "hex": "#939388",
+   "L": 60.6,
+   "a": -2.1,
+   "b": 5.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7031",
+   "name": "Blue grey",
+   "hex": "#5D6970",
+   "L": 43.7,
+   "a": -2.9,
+   "b": -5.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7032",
+   "name": "Pebble grey",
+   "hex": "#B9B9A8",
+   "L": 74.7,
+   "a": -3.0,
+   "b": 8.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7033",
+   "name": "Cement grey",
+   "hex": "#818979",
+   "L": 56.0,
+   "a": -6.0,
+   "b": 7.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7034",
+   "name": "Yellow grey",
+   "hex": "#939176",
+   "L": 59.7,
+   "a": -4.0,
+   "b": 14.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7035",
+   "name": "Light grey",
+   "hex": "#CBD0CC",
+   "L": 83.0,
+   "a": -2.4,
+   "b": 1.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7036",
+   "name": "Platinum grey",
+   "hex": "#9A9697",
+   "L": 62.4,
+   "a": 1.6,
+   "b": -0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7037",
+   "name": "Dusty grey",
+   "hex": "#7C7F7E",
+   "L": 52.9,
+   "a": -1.3,
+   "b": 0.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7038",
+   "name": "Agate grey",
+   "hex": "#B4B8B0",
+   "L": 74.3,
+   "a": -2.9,
+   "b": 3.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7039",
+   "name": "Quartz grey",
+   "hex": "#6B695F",
+   "L": 44.3,
+   "a": -1.2,
+   "b": 5.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7040",
+   "name": "Window grey",
+   "hex": "#9DA3A6",
+   "L": 66.6,
+   "a": -1.5,
+   "b": -2.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7042",
+   "name": "Traffic grey A",
+   "hex": "#8F9695",
+   "L": 61.5,
+   "a": -2.7,
+   "b": -0.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7043",
+   "name": "Traffic grey B",
+   "hex": "#4E5451",
+   "L": 35.1,
+   "a": -3.1,
+   "b": 0.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7044",
+   "name": "Silk grey",
+   "hex": "#BDBDB2",
+   "L": 76.3,
+   "a": -2.0,
+   "b": 5.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7045",
+   "name": "Telegrey 1",
+   "hex": "#91969A",
+   "L": 61.8,
+   "a": -1.0,
+   "b": -2.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7046",
+   "name": "Telegrey 2",
+   "hex": "#82898E",
+   "L": 56.7,
+   "a": -1.5,
+   "b": -3.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7047",
+   "name": "Telegrey 4",
+   "hex": "#CFD0CF",
+   "L": 83.4,
+   "a": -0.5,
+   "b": 0.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 7048",
+   "name": "Pearl mouse grey",
+   "hex": "#888175",
+   "L": 54.3,
+   "a": 0.5,
+   "b": 7.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8000",
+   "name": "Green brown",
+   "hex": "#887142",
+   "L": 48.8,
+   "a": 2.6,
+   "b": 29.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8001",
+   "name": "Ochre brown",
+   "hex": "#9C6B30",
+   "L": 49.3,
+   "a": 13.7,
+   "b": 39.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8002",
+   "name": "Signal brown",
+   "hex": "#7B5141",
+   "L": 38.7,
+   "a": 15.6,
+   "b": 16.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8003",
+   "name": "Clay brown",
+   "hex": "#80542F",
+   "L": 39.8,
+   "a": 14.3,
+   "b": 28.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8004",
+   "name": "Copper brown",
+   "hex": "#8F4E35",
+   "L": 40.5,
+   "a": 24.9,
+   "b": 26.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8007",
+   "name": "Fawn brown",
+   "hex": "#6F4A2F",
+   "L": 35.0,
+   "a": 12.5,
+   "b": 22.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8008",
+   "name": "Olive brown",
+   "hex": "#6F4F28",
+   "L": 36.2,
+   "a": 8.8,
+   "b": 28.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8011",
+   "name": "Nut brown",
+   "hex": "#5A3A29",
+   "L": 27.7,
+   "a": 12.0,
+   "b": 16.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8012",
+   "name": "Red brown",
+   "hex": "#673831",
+   "L": 29.2,
+   "a": 20.0,
+   "b": 13.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8014",
+   "name": "Sepia brown",
+   "hex": "#49392D",
+   "L": 25.4,
+   "a": 5.1,
+   "b": 10.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8015",
+   "name": "Chestnut brown",
+   "hex": "#633A34",
+   "L": 29.2,
+   "a": 17.4,
+   "b": 11.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8016",
+   "name": "Mahogany brown",
+   "hex": "#4C2F26",
+   "L": 22.7,
+   "a": 12.1,
+   "b": 11.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8017",
+   "name": "Chocolate brown",
+   "hex": "#44322D",
+   "L": 22.7,
+   "a": 7.3,
+   "b": 6.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8019",
+   "name": "Grey brown",
+   "hex": "#3F3A3A",
+   "L": 24.9,
+   "a": 2.2,
+   "b": 0.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8022",
+   "name": "Black brown",
+   "hex": "#211F20",
+   "L": 12.0,
+   "a": 1.2,
+   "b": -0.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8023",
+   "name": "Orange brown",
+   "hex": "#A65E2F",
+   "L": 47.4,
+   "a": 25.4,
+   "b": 38.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8024",
+   "name": "Beige brown",
+   "hex": "#79553C",
+   "L": 39.4,
+   "a": 11.7,
+   "b": 20.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8025",
+   "name": "Pale brown",
+   "hex": "#755C49",
+   "L": 41.1,
+   "a": 7.3,
+   "b": 14.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8028",
+   "name": "Terra brown",
+   "hex": "#4E3B31",
+   "L": 26.6,
+   "a": 6.7,
+   "b": 9.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 8029",
+   "name": "Pearl copper",
+   "hex": "#763C28",
+   "L": 32.3,
+   "a": 23.4,
+   "b": 23.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 9001",
+   "name": "Cream",
+   "hex": "#FDF4E3",
+   "L": 96.5,
+   "a": 0.2,
+   "b": 9.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 9002",
+   "name": "Grey white",
+   "hex": "#E7EBDA",
+   "L": 92.3,
+   "a": -4.3,
+   "b": 7.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 9003",
+   "name": "Signal white",
+   "hex": "#F4F4F4",
+   "L": 96.2,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 9004",
+   "name": "Signal black",
+   "hex": "#282828",
+   "L": 16.1,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 9005",
+   "name": "Jet black",
+   "hex": "#0A0A0A",
+   "L": 2.7,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 9006",
+   "name": "White aluminum",
+   "hex": "#A5A5A5",
+   "L": 67.7,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 9007",
+   "name": "Grey aluminum",
+   "hex": "#8F8F8F",
+   "L": 59.4,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 9010",
+   "name": "Pure white",
+   "hex": "#FFFFFF",
+   "L": 100.0,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 9011",
+   "name": "Graphite black",
+   "hex": "#1C1C1C",
+   "L": 10.3,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 9016",
+   "name": "Traffic white",
+   "hex": "#F6F6F6",
+   "L": 96.9,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 9017",
+   "name": "Traffic black",
+   "hex": "#1E1E1E",
+   "L": 11.3,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 9018",
+   "name": "Papyrus white",
+   "hex": "#D7D7D7",
+   "L": 86.0,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 9022",
+   "name": "Pearl light grey",
+   "hex": "#9C9C9C",
+   "L": 64.4,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "RAL 9023",
+   "name": "Pearl dark grey",
+   "hex": "#828282",
+   "L": 54.4,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  }
+ ]
+}

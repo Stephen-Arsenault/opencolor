@@ -1,9 +1,9 @@
 /**
  * Datacolor ColorReader (PCE-1 / "Model Y") — BRSP driver over Web Bluetooth.
  *
- * Port of /opt/data/colorreader/colorreader_demo.py to TypeScript.
- * Protocol reverse-engineered from Apple PacketLogger captures (2026-09-01);
- * see /opt/data/colorreader/REVERSE_ENGINEERING_REPORT.md.
+ * Protocol reverse-engineered from Apple PacketLogger captures of the official
+ * app. The reference Python driver and the annotated protocol write-up are kept
+ * out of the deployed app (see the archive/ directory).
  *
  * TRANSPORT
  *   GATT service  da2b84f1-6279-48de-bdc0-afbea0226079  (BlueRadios BRSP UART)
@@ -20,6 +20,8 @@
  * http://localhost) and a user gesture. requestDevice() must be called
  * directly from a click/keypress handler.
  */
+
+import { Lab } from './color.js';
 
 // ---------------------------------------------------------------------------
 // GATT constants (verified against GATT discovery traffic)
@@ -68,9 +70,10 @@ export function frame(payload: Uint8Array): Uint8Array {
   const body = new Uint8Array(payload.length + 1);
   body.set(payload, 0);
   body[payload.length] = sum;
-  const out = new Uint8Array(body.length + 2);
+  const enc = nibenc(body); // 2 wire chars per body byte
+  const out = new Uint8Array(enc.length + 2);
   out[0] = STX;
-  out.set(nibenc(body), 1);
+  out.set(enc, 1);
   out[out.length - 1] = ETX;
   return out;
 }
@@ -112,7 +115,10 @@ export class BrspStream {
         const body = dec.subarray(0, -1);
         const cks = dec[dec.length - 1];
         const sum = body.reduce((a, b) => (a + b) & 0xff, 0);
-        if (sum === cks) done.push(body);
+        // Emit the full message *including* the trailing checksum byte (matches the
+        // Python driver). decodeSlot's ready word (01 46) reuses the checksum byte as
+        // its low byte, so stripping it here would break slot-ready detection.
+        if (sum === cks) done.push(dec);
         else console.warn(`[brsp] bad checksum: want ${cks.toString(16)} got ${sum.toString(16)}`);
       } else {
         console.warn('[brsp] undecodable frame dropped');
@@ -240,15 +246,24 @@ export class ColorReader {
   private queue: Uint8Array[] = [];
   private resolvers: ((m: Uint8Array) => void)[] = [];
 
+  /** Log raw TX/RX frames to the console for protocol bring-up. Set true to trace. */
+  static debug = false;
+
+  /** Fired when the GATT link drops (device sleep, out of range, unpair). */
+  onDisconnect: (() => void) | null = null;
+
   /** Must be called from a user-gesture handler (click). */
   static async requestDevice(): Promise<BluetoothDevice> {
     if (!('bluetooth' in navigator)) {
       throw new Error('Web Bluetooth not available. Use Chrome/Edge (desktop or Android) over HTTPS.');
     }
+    // The device advertises its name as "DC_<serial>" (e.g. DC_900141759) in the
+    // ADV_IND, and the 128-bit BRSP service UUID only in the SCAN_RSP. macOS
+    // CoreBluetooth doesn't reliably expose the scan-response service for filter
+    // matching, so match on the name prefix; keep the service filter as a fallback.
     return navigator.bluetooth.requestDevice({
       filters: [
-        { namePrefix: 'ColorReader' },
-        { namePrefix: 'Model Y' },
+        { namePrefix: 'DC_' },
         { services: [BRSP_SERVICE] },
       ],
       optionalServices: [BRSP_SERVICE],
@@ -257,7 +272,11 @@ export class ColorReader {
 
   async connect(device?: BluetoothDevice): Promise<void> {
     this.device = device ?? (await ColorReader.requestDevice());
-    console.log(`connecting to ${this.device.name ?? '(unnamed)'} …`);
+    if (ColorReader.debug) console.log(`connecting to ${this.device.name ?? '(unnamed)'} …`);
+    this.device.addEventListener('gattserverdisconnected', () => {
+      this.rxChar = null;
+      this.onDisconnect?.();
+    });
     this.server = await this.device.gatt!.connect();
 
     const service = await this.server.getPrimaryService(BRSP_SERVICE);
@@ -265,7 +284,10 @@ export class ColorReader {
     await this.rxChar.startNotifications();
     this.rxChar.addEventListener('characteristicvaluechanged', (ev) => {
       const dv = (ev.target as BluetoothRemoteGATTCharacteristic).value!;
-      for (const msg of this.stream.feed(new Uint8Array(dv.buffer, dv.byteOffset, dv.byteLength))) {
+      const chunk = new Uint8Array(dv.buffer, dv.byteOffset, dv.byteLength);
+      if (ColorReader.debug) console.log('  RX chunk:', hex(chunk));
+      for (const msg of this.stream.feed(chunk)) {
+        if (ColorReader.debug) console.log('  RX msg  :', hex(msg), `(${msg.length}B)`);
         const r = this.resolvers.shift();
         if (r) r(msg);
         else this.queue.push(msg);
@@ -321,7 +343,9 @@ export class ColorReader {
       clearTimeout(timer);
       this.resolvers.pop()!(queued);
     }
-    await tx.writeValue(plain(frame(payload)));
+    const wire = frame(payload);
+    if (ColorReader.debug) console.log('TX cmd   :', hex(payload), ' wire:', hex(wire));
+    await tx.writeValue(plain(wire));
     return p;
   }
 
@@ -335,11 +359,29 @@ export class ColorReader {
     throw new Error('data slot never became ready');
   }
 
-  /** CALIBRATE — measure against the known white reference. */
-  async calibrate(): Promise<Measurement> {
-    await this.transact(CMD_CALIBRATE); // c4 92 01 ack
+  /**
+   * CALIBRATE — measure against the known white reference (inside the cap).
+   * Also reads back the 0x95 Lab so callers can sanity-check the result: a valid
+   * white-reference calibration should read near-white/neutral. With the cap off
+   * the device still ACKs, so validity must be judged from these values.
+   */
+  async calibrate(): Promise<{ ok: boolean; status: number; measurement: Measurement; lab: CalLab | null }> {
+    // The calibrate ACK is authoritative: `c4 92 <status>` — status 0x01 = the
+    // white reference was read successfully, 0x00 = failure (cap off / no chip).
+    // Verified against cap-on (01) vs cap-off (00) captures.
+    const ack = await this.transact(CMD_CALIBRATE);
+    const status = ack[0] === 0xc4 && ack[1] === 0x92 ? ack[2] : -1;
+    const ok = status === 0x01;
+    // 0x95 Lab read is best-effort (device may return a stale value on failure).
+    let lab: CalLab | null = null;
+    try {
+      lab = decodeCalLab(await this.transact(CMD_READ_CAL_LAB, 2500));
+    } catch {
+      /* no Lab returned */
+    }
     await this.waitSlotReady();
-    return decodeMeasurement(await this.transact(CMD_READ_MEAS));
+    const measurement = decodeMeasurement(await this.transact(CMD_READ_MEAS));
+    return { ok, status, measurement, lab };
   }
 
   /** MATCH — request color match data (Lab floats + measurement frame). */
@@ -351,26 +393,29 @@ export class ColorReader {
     return { measurement, calibrationLab };
   }
 
+  /**
+   * Scan a sample and return its CIELAB (L*, a*, b*) — the single value the
+   * match UI ranks against. Currently sourced from the 0x95 Lab read.
+   *
+   * ⚠️ Protocol open item (see REVERSE_ENGINEERING_REPORT.md §8.3): it is not yet
+   * confirmed whether 0x95 returns the *measured sample's* Lab or the active
+   * *calibration reference's* Lab. If colored-target captures show the latter,
+   * this is the one place to change — the whole app reads the scan from here.
+   */
+  async scan(): Promise<{ lab: Lab; raw: CalLab; measurement: Measurement }> {
+    const { calibrationLab, measurement } = await this.requestMatch();
+    return {
+      lab: { L: calibrationLab.Lstar, a: calibrationLab.astar, b: calibrationLab.bstar },
+      raw: calibrationLab,
+      measurement,
+    };
+  }
+
   async deviceInfo(): Promise<DeviceInfo> {
     return decodeDeviceInfo(await this.transact(CMD_DEVICE_INFO));
   }
 
   async status(): Promise<Status> {
     return decodeStatus(await this.transact(CMD_GET_STATUS));
-  }
-}
-
-/** One full cycle: pair → info → status → calibrate → match → disconnect. */
-export async function runCycle(reader: ColorReader): Promise<void> {
-  console.log('[pair] requestDevice + connect + BRSP open');
-  await reader.connect();
-  try {
-    console.log('[info]     ', await reader.deviceInfo());
-    console.log('[status]   ', await reader.status());
-    console.log('[calibrate]', await reader.calibrate());
-    console.log('[match]    ', await reader.requestMatch());
-  } finally {
-    console.log('[disconnect]');
-    await reader.disconnect();
   }
 }

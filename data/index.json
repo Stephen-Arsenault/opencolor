@@ -1,0 +1,50 @@
+[
+  {
+    "id": "benjamin_moore",
+    "file": "benjamin_moore.json",
+    "label": "Benjamin Moore Classic Colors",
+    "count": 1680
+  },
+  {
+    "id": "css_named",
+    "file": "css_named.json",
+    "label": "CSS Named Colors (X11/HTML)",
+    "count": 148
+  },
+  {
+    "id": "munsell",
+    "file": "munsell.json",
+    "label": "Munsell (Re-renotation, revised mrr-revised)",
+    "count": 2985
+  },
+  {
+    "id": "ncs",
+    "file": "ncs.json",
+    "label": "NCS (Natural Color System)",
+    "count": 1950
+  },
+  {
+    "id": "pantone_pms_c",
+    "file": "pantone_pms_c.json",
+    "label": "Pantone PMS Coated (C)",
+    "count": 1341
+  },
+  {
+    "id": "pantone_pms_u",
+    "file": "pantone_pms_u.json",
+    "label": "Pantone PMS Uncoated (U)",
+    "count": 1341
+  },
+  {
+    "id": "ral_classic",
+    "file": "ral_classic.json",
+    "label": "RAL Classic",
+    "count": 213
+  },
+  {
+    "id": "sherwin_williams",
+    "file": "sherwin_williams.json",
+    "label": "Sherwin-Williams paint colors",
+    "count": 1728
+  }
+]

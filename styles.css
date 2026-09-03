@@ -1,0 +1,325 @@
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-2: #f3f4f6;
+  --border: #e3e6ea;
+  --border-strong: #d3d8df;
+  --text: #1b2330;
+  --muted: #667085;
+  --accent: #2563eb;
+  --accent-weak: #eef3fe;
+  --green: #17976a;
+  --amber: #c98a12;
+  --radius: 10px;
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.05), 0 1px 3px rgba(16, 24, 40, 0.06);
+  --gap: 1rem;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ---------- top bar ---------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+  padding: 0.7rem 1.25rem;
+  padding-top: max(0.7rem, env(safe-area-inset-top));
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.brand { font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; }
+.actions { display: flex; gap: 0.5rem; }
+
+.pill {
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.pill:hover { background: var(--surface-2); }
+.pill:disabled { opacity: 0.55; cursor: default; }
+.pill.ghost { border-color: var(--border); color: var(--muted); }
+.pill.ghost:hover { color: var(--text); }
+.pill.small { font-size: 0.8rem; padding: 0.32rem 0.65rem; }
+.pill.is-connecting { color: var(--muted); }
+.pill.is-connected { border-color: var(--green); color: var(--green); background: #edf8f3; }
+.pill.is-disconnected { border-color: var(--amber); color: var(--amber); background: #fdf6e8; }
+
+/* ---------- layout ---------- */
+main {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+  padding-bottom: max(2rem, env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.match-btn {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.8rem 1.75rem;
+  border-radius: var(--radius);
+  border: 1px solid #1d4ed8;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background 0.15s, box-shadow 0.15s, transform 0.1s;
+}
+.match-btn:hover { background: #1d4ed8; }
+.match-btn:active { transform: translateY(1px); }
+.match-btn:disabled { opacity: 0.75; cursor: default; }
+
+/* Spinner is absolutely positioned so showing it never resizes the button or
+   shifts the centered label. Appears only after ~1s (JS toggles .loading). */
+.match-btn .spinner {
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  width: 1.05em;
+  height: 1.05em;
+  margin-top: -0.525em;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-top-color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.match-btn.loading .spinner { opacity: 1; animation: spin 0.7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- result / stacked scan-over-match hero ---------- */
+.result { width: 100%; }
+.combo {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.combo-swatch {
+  height: clamp(300px, 46vh, 460px);
+  display: flex;
+  flex-direction: column;
+}
+.combo-scan {
+  flex: 0 0 25%;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  /* match the card's inner radius so the top corners don't bleed square */
+  border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+}
+.combo-match { flex: 1 1 75%; }
+.combo-tag {
+  position: absolute;
+  left: 0.6rem;
+  top: 0.5rem;
+  font-size: 0.72rem;
+  color: #fff;
+  background: rgba(27, 35, 48, 0.72);
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  backdrop-filter: blur(2px);
+}
+.combo-tag .mono { font-size: 0.72rem; }
+.combo-tag .info {
+  margin-left: 0.35rem;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.75;
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: help;
+}
+.combo-tag .info:hover { opacity: 1; }
+.combo-info { padding: 0.9rem 1.1rem 1.1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.match-head { display: flex; align-items: center; gap: 0.4rem; }
+.match-name { font-weight: 650; font-size: 1.1rem; color: var(--text); }
+.warn-badge { color: #b45309; cursor: help; font-size: 0.95rem; line-height: 1; }
+
+.closeness { display: flex; flex-direction: column; gap: 0.35rem; margin-top: 0.15rem; }
+.meter {
+  height: 7px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.meter > span {
+  display: block;
+  height: 100%;
+  width: calc(var(--score, 0) * 1%);
+  background: linear-gradient(90deg, var(--amber), var(--green));
+  transition: width 0.3s ease;
+}
+.close-label { font-size: 0.85rem; color: var(--muted); }
+
+/* ---------- panels ---------- */
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.25rem;
+  box-shadow: var(--shadow);
+}
+.panel-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.85rem; }
+.panel-head h2 { margin: 0; font-size: 0.95rem; font-weight: 650; letter-spacing: -0.01em; }
+
+/* ---------- gallery ---------- */
+.gallery {
+  display: flex;
+  align-items: stretch; /* equal-height cards despite varying meta lines */
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.4rem;
+  scroll-snap-type: x proximity;
+}
+.gallery:empty::after { content: 'Tap “Match Color” to scan.'; color: var(--muted); font-size: 0.9rem; }
+.gallery-note { margin: 0; padding: 0.4rem 0.25rem; font-size: 0.9rem; }
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  width: 9rem;
+  scroll-snap-align: start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  font: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s;
+}
+.card:hover { border-color: var(--border-strong); box-shadow: var(--shadow); transform: translateY(-1px); }
+/* Single outline ring — uniform on all sides (border+shadow stacked unevenly at
+   fractional device-pixel ratios) and no layout shift when selection moves. */
+.card.selected { border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: -1px; }
+.card-swatch {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-bottom: 1px solid var(--border);
+  /* round top corners to the card's inner radius so the swatch doesn't poke
+     square corners past the (highlighted) rounded border */
+  border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+}
+.card-swatch.oog { position: relative; }
+.card-swatch.oog::after {
+  content: '≈';
+  position: absolute; top: 3px; right: 5px;
+  font-size: 0.75rem; color: rgba(0, 0, 0, 0.4);
+}
+.card-meta { flex: 1 1 auto; padding: 0.55rem 0.65rem; display: flex; flex-direction: column; gap: 0.15rem; }
+.card-name { font-size: 0.85rem; font-weight: 600; line-height: 1.25; }
+.card-code { font-size: 0.75rem; font-weight: 600; color: var(--text); }
+.card-sys { font-size: 0.72rem; color: var(--muted); }
+.card-de { font-size: 0.72rem; color: var(--muted); margin-top: 0.1rem; }
+
+/* ---------- filters ---------- */
+summary { cursor: pointer; font-weight: 600; font-size: 0.92rem; }
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.75rem;
+}
+.chk {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.35rem;
+  border-bottom: 1px solid var(--border); /* row lines to connect name → count */
+  cursor: pointer;
+}
+.chk:last-child { border-bottom: none; }
+.chk:hover { background: var(--surface-2); }
+.chk input { accent-color: var(--accent); flex: 0 0 auto; }
+.chk-name {
+  flex: 1 1 auto;
+  min-width: 0; /* allow the ellipsis to kick in */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.chk-count { flex: 0 0 auto; color: var(--muted); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+
+/* ---------- history ---------- */
+.history-list { display: flex; flex-direction: column; gap: 0.45rem; }
+.hist-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.55rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  transition: border-color 0.15s, background 0.15s;
+}
+.hist-row:hover { border-color: var(--border-strong); background: var(--surface-2); }
+.hist-sw { width: 2.2rem; height: 2.2rem; border-radius: 7px; border: 1px solid var(--border-strong); flex: 0 0 auto; }
+.hist-main { display: flex; flex-direction: column; flex: 1 1 auto; font-size: 0.9rem; font-weight: 500; }
+.hist-sub { font-size: 0.75rem; color: var(--muted); font-weight: 400; }
+.hist-time { font-size: 0.75rem; color: var(--muted); }
+
+/* ---------- misc ---------- */
+.muted { color: var(--muted); }
+.small { font-size: 0.8rem; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.78rem; }
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%) translateY(2rem);
+  background: #1b2330;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 9px;
+  font-size: 0.88rem;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.18);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  max-width: calc(100vw - 2rem);
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.toast.success { background: var(--green); color: #fff; }
+.toast.warn { background: #f5b301; color: #1b2330; font-weight: 500; } /* yellow warning */
+.toast.error { background: #dc2626; color: #fff; font-weight: 500; }
+
+@media (max-width: 30rem) {
+  .compare { grid-template-columns: 1fr; }
+}

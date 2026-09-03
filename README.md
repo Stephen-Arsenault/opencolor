@@ -1,40 +1,86 @@
-# ColorReader BLE - Datacolor PCE-1 / "Model Y" reverse engineering
+# ColorReader
 
-Protocol decode, drivers, and tooling for controlling the Datacolor ColorReader
-from a host computer (Python + Web Bluetooth), reverse-engineered from Apple
-PacketLogger captures of the official Android app.
+A Web Bluetooth app for the **Datacolor ColorReader** (PCE-1 / "Model Y")
+colorimeter. Pair the device, scan a physical color, and match the measured
+CIELAB against named color standards — RAL, Pantone, NCS, Munsell, and paint
+fandecks (Sherwin-Williams, Benjamin Moore) — ranked by CIEDE2000 color
+difference. Installable as a PWA.
+
+> **Working title.** "ColorReader" is Datacolor's own product name; this is a
+> placeholder pending a distinct brand.
+
+## Requirements
+
+- **Chrome or Edge** on desktop or Android. Web Bluetooth is not available in
+  Safari or on iOS (WebKit has no Web Bluetooth), so **iOS cannot scan**.
+- A **secure context**: `https://` or `http://localhost`. Required for both Web
+  Bluetooth and the service worker.
+
+## Run locally
+
+The app is static — no build step is needed to run it, `dist/` and `data/` are
+committed:
+
+```sh
+npx serve .          # then open http://localhost:3000 in Chrome/Edge
+```
+
+To rebuild the TypeScript after editing `src/`:
+
+```sh
+npm ci
+npm run build        # tsc → dist/
+```
+
+## Deploy (Cloudflare Pages)
+
+The repo root **is** the site. Because `dist/` and `data/` are committed, Pages
+needs no build:
+
+- Framework preset: **None**
+- Build command: *(empty)*
+- Build output directory: **/**
+
+(If you'd rather build on Pages, set the build command to `npm ci && npm run
+build` and keep the output directory at `/`.)
 
 ## Layout
 
-- REVERSE_ENGINEERING_REPORT.md - full annotated transcript of both captures + protocol docs
-- colorreader_brsp.py - standalone .pklg parser + BRSP decoder (capture analysis tool)
-- colorreader_demo.py - bleak (Python) driver: pair > info > status > calibrate > match > disconnect
-- web/ - TypeScript port for the Web Bluetooth API (Chrome/Edge) + demo page + replay tests
+| Path | What |
+|---|---|
+| `index.html`, `styles.css` | App shell and styling |
+| `src/` | TypeScript source |
+| `dist/` | Compiled JS (committed, served directly) |
+| `data/` | Reference color datasets + `index.json` manifest |
+| `icons/`, `manifest.webmanifest`, `sw.js` | PWA assets |
 
-## Quick start
+### Source modules (`src/`)
 
-Python (desktop, BlueZ):
+- `colorreader.ts` — Web Bluetooth BRSP driver (connect, scan, calibrate).
+- `color.ts` — CIELAB↔sRGB, CIEDE2000, closeness rating.
+- `matcher.ts` — dataset loading and nearest-color search.
+- `store.ts` — localStorage history and filter prefs.
+- `app.ts` — UI controller.
 
-    python3 -m venv venv && ./venv/bin/pip install bleak
-    ./venv/bin/python colorreader_demo.py            # auto-detect device
-    ./venv/bin/python colorreader_demo.py --address XX:XX:XX:XX:XX:XX --interval 5
+## Reference data
 
-Web (Chrome/Edge, secure context required):
+`data/*.json` are CIELAB (D65/2°) datasets. Values are either published by the
+source or derived from published hex (`method` field notes which). They were
+compiled into the (gitignored) `archive/color_systems/` workspace and copied in;
+regenerate with `archive/build-data.py`.
 
-    cd web
-    npm install
-    npm run build          # tsc -> dist/
-    npm test               # replays both .pklg captures through the TS codec
-    npx serve .            # open in Chrome, click "Run full cycle"
+## Notes
 
-## Protocol summary
+- **Calibration** reads the white reference tile inside the cap. The device's
+  calibrate ACK is authoritative (success vs. failure); a calibration that reads
+  more than ΔE 1 from the reference white is flagged, and scans taken under a bad
+  calibration are marked in the result and history.
+- **Open item:** it is not yet confirmed whether the device's `0x95` read returns
+  the measured sample's Lab or the active calibration reference's. The scan value
+  comes from a single method (`ColorReader.scan()`) if that needs to change.
 
-- Transport: BLE GATT, BlueRadios BRSP UART service da2b84f1-6279-48de-bdc0-afbea0226079
-- Write (host>dev): bf03260c-... (handle 0x001A)
-- Indicate (dev>host): 18cda784-... (handle 0x001C), CCCD 0x2902
-- Framing: STX 0x02 + nibble-encoded ASCII (+0x30/nibble) + additive checksum + ETX 0x03
-- Calibrate (white-ref check): 92 ff 88 59 43 6a > ack > poll 80 09 until 0x0146 > read 93 ff
-- Match (Lab read): 92 00 e7 54 43 6a > ack > read 95 00 -> 3x float32-LE CIELab
-- Info: 80 04 (serial in C5 frame); Status: 80 01 (FW/state in C2 frame)
+## `archive/` (gitignored)
 
-See REVERSE_ENGINEERING_REPORT.md for byte-level detail and open questions.
+Local-only material kept out of the deployed app: the reverse-engineering report,
+the reference Python drivers, PacketLogger captures, the data-collection
+workspace, and the Node replay test.

@@ -1,0 +1,1344 @@
+{
+ "system": "CSS Named Colors (X11/HTML)",
+ "source_urls": [
+  "https://www.w3.org/TR/css-color-4/#named-colors"
+ ],
+ "illuminant": "D65",
+ "observer": "2",
+ "note": "Hex values as defined in the CSS Color Level 4 spec table; CIELAB derived via sRGB -> XYZ (D65, 2deg) -> Lab.",
+ "count": 148,
+ "colors": [
+  {
+   "code": "aliceblue",
+   "name": "aliceblue",
+   "hex": "#f0f8ff",
+   "L": 97.2,
+   "a": -1.3,
+   "b": -4.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "antiquewhite",
+   "name": "antiquewhite",
+   "hex": "#faebd7",
+   "L": 93.7,
+   "a": 1.8,
+   "b": 11.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "aqua",
+   "name": "aqua",
+   "hex": "#00ffff",
+   "L": 91.1,
+   "a": -48.1,
+   "b": -14.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "aquamarine",
+   "name": "aquamarine",
+   "hex": "#7fffd4",
+   "L": 92.0,
+   "a": -45.5,
+   "b": 9.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "azure",
+   "name": "azure",
+   "hex": "#f0ffff",
+   "L": 98.9,
+   "a": -4.9,
+   "b": -1.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "beige",
+   "name": "beige",
+   "hex": "#f5f5dc",
+   "L": 95.9,
+   "a": -4.2,
+   "b": 12.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "bisque",
+   "name": "bisque",
+   "hex": "#ffe4c4",
+   "L": 92.0,
+   "a": 4.4,
+   "b": 19.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "black",
+   "name": "black",
+   "hex": "#000000",
+   "L": 0.0,
+   "a": 0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "blanchedalmond",
+   "name": "blanchedalmond",
+   "hex": "#ffebcd",
+   "L": 93.9,
+   "a": 2.1,
+   "b": 17.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "blue",
+   "name": "blue",
+   "hex": "#0000ff",
+   "L": 32.3,
+   "a": 79.2,
+   "b": -107.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "blueviolet",
+   "name": "blueviolet",
+   "hex": "#8a2be2",
+   "L": 42.2,
+   "a": 69.8,
+   "b": -74.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "brown",
+   "name": "brown",
+   "hex": "#a52a2a",
+   "L": 37.5,
+   "a": 49.7,
+   "b": 30.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "burlywood",
+   "name": "burlywood",
+   "hex": "#deb887",
+   "L": 77.0,
+   "a": 7.0,
+   "b": 30.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "cadetblue",
+   "name": "cadetblue",
+   "hex": "#5f9ea0",
+   "L": 61.2,
+   "a": -19.7,
+   "b": -7.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "chartreuse",
+   "name": "chartreuse",
+   "hex": "#7fff00",
+   "L": 89.9,
+   "a": -68.1,
+   "b": 85.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "chocolate",
+   "name": "chocolate",
+   "hex": "#d2691e",
+   "L": 56.0,
+   "a": 37.1,
+   "b": 56.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "coral",
+   "name": "coral",
+   "hex": "#ff7f50",
+   "L": 67.3,
+   "a": 45.4,
+   "b": 47.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "cornflowerblue",
+   "name": "cornflowerblue",
+   "hex": "#6495ed",
+   "L": 61.9,
+   "a": 9.3,
+   "b": -49.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "cornsilk",
+   "name": "cornsilk",
+   "hex": "#fff8dc",
+   "L": 97.5,
+   "a": -2.2,
+   "b": 14.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "crimson",
+   "name": "crimson",
+   "hex": "#dc143c",
+   "L": 47.0,
+   "a": 70.9,
+   "b": 33.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "cyan",
+   "name": "cyan",
+   "hex": "#00ffff",
+   "L": 91.1,
+   "a": -48.1,
+   "b": -14.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkblue",
+   "name": "darkblue",
+   "hex": "#00008b",
+   "L": 14.8,
+   "a": 50.4,
+   "b": -68.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkcyan",
+   "name": "darkcyan",
+   "hex": "#008b8b",
+   "L": 52.2,
+   "a": -30.6,
+   "b": -9.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkgoldenrod",
+   "name": "darkgoldenrod",
+   "hex": "#b8860b",
+   "L": 59.2,
+   "a": 9.9,
+   "b": 62.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkgray",
+   "name": "darkgray",
+   "hex": "#a9a9a9",
+   "L": 69.2,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkgreen",
+   "name": "darkgreen",
+   "hex": "#006400",
+   "L": 36.2,
+   "a": -43.4,
+   "b": 41.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkgrey",
+   "name": "darkgrey",
+   "hex": "#a9a9a9",
+   "L": 69.2,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkkhaki",
+   "name": "darkkhaki",
+   "hex": "#bdb76b",
+   "L": 73.4,
+   "a": -8.8,
+   "b": 39.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkmagenta",
+   "name": "darkmagenta",
+   "hex": "#8b008b",
+   "L": 32.6,
+   "a": 62.6,
+   "b": -38.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkolivegreen",
+   "name": "darkolivegreen",
+   "hex": "#556b2f",
+   "L": 42.2,
+   "a": -18.8,
+   "b": 30.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkorange",
+   "name": "darkorange",
+   "hex": "#ff8c00",
+   "L": 69.5,
+   "a": 36.8,
+   "b": 75.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkorchid",
+   "name": "darkorchid",
+   "hex": "#9932cc",
+   "L": 43.4,
+   "a": 65.2,
+   "b": -60.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkred",
+   "name": "darkred",
+   "hex": "#8b0000",
+   "L": 28.1,
+   "a": 51.0,
+   "b": 41.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darksalmon",
+   "name": "darksalmon",
+   "hex": "#e9967a",
+   "L": 69.9,
+   "a": 28.2,
+   "b": 27.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkseagreen",
+   "name": "darkseagreen",
+   "hex": "#8fbc8f",
+   "L": 72.1,
+   "a": -23.8,
+   "b": 18.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkslateblue",
+   "name": "darkslateblue",
+   "hex": "#483d8b",
+   "L": 30.8,
+   "a": 26.1,
+   "b": -42.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkslategray",
+   "name": "darkslategray",
+   "hex": "#2f4f4f",
+   "L": 31.3,
+   "a": -11.7,
+   "b": -3.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkslategrey",
+   "name": "darkslategrey",
+   "hex": "#2f4f4f",
+   "L": 31.3,
+   "a": -11.7,
+   "b": -3.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkturquoise",
+   "name": "darkturquoise",
+   "hex": "#00ced1",
+   "L": 75.3,
+   "a": -40.0,
+   "b": -13.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "darkviolet",
+   "name": "darkviolet",
+   "hex": "#9400d3",
+   "L": 39.6,
+   "a": 76.3,
+   "b": -70.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "deeppink",
+   "name": "deeppink",
+   "hex": "#ff1493",
+   "L": 56.0,
+   "a": 84.5,
+   "b": -5.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "deepskyblue",
+   "name": "deepskyblue",
+   "hex": "#00bfff",
+   "L": 72.5,
+   "a": -17.7,
+   "b": -42.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "dimgray",
+   "name": "dimgray",
+   "hex": "#696969",
+   "L": 44.4,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "dimgrey",
+   "name": "dimgrey",
+   "hex": "#696969",
+   "L": 44.4,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "dodgerblue",
+   "name": "dodgerblue",
+   "hex": "#1e90ff",
+   "L": 59.4,
+   "a": 10.0,
+   "b": -63.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "firebrick",
+   "name": "firebrick",
+   "hex": "#b22222",
+   "L": 39.1,
+   "a": 55.9,
+   "b": 37.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "floralwhite",
+   "name": "floralwhite",
+   "hex": "#fffaf0",
+   "L": 98.4,
+   "a": -0.0,
+   "b": 5.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "forestgreen",
+   "name": "forestgreen",
+   "hex": "#228b22",
+   "L": 50.6,
+   "a": -49.6,
+   "b": 45.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "fuchsia",
+   "name": "fuchsia",
+   "hex": "#ff00ff",
+   "L": 60.3,
+   "a": 98.2,
+   "b": -60.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "gainsboro",
+   "name": "gainsboro",
+   "hex": "#dcdcdc",
+   "L": 87.8,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "ghostwhite",
+   "name": "ghostwhite",
+   "hex": "#f8f8ff",
+   "L": 97.8,
+   "a": 1.2,
+   "b": -3.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "gold",
+   "name": "gold",
+   "hex": "#ffd700",
+   "L": 86.9,
+   "a": -1.9,
+   "b": 87.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "goldenrod",
+   "name": "goldenrod",
+   "hex": "#daa520",
+   "L": 70.8,
+   "a": 8.5,
+   "b": 68.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "gray",
+   "name": "gray",
+   "hex": "#808080",
+   "L": 53.6,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "green",
+   "name": "green",
+   "hex": "#008000",
+   "L": 46.2,
+   "a": -51.7,
+   "b": 49.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "greenyellow",
+   "name": "greenyellow",
+   "hex": "#adff2f",
+   "L": 92.0,
+   "a": -52.5,
+   "b": 81.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "grey",
+   "name": "grey",
+   "hex": "#808080",
+   "L": 53.6,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "honeydew",
+   "name": "honeydew",
+   "hex": "#f0fff0",
+   "L": 98.6,
+   "a": -7.6,
+   "b": 5.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "hotpink",
+   "name": "hotpink",
+   "hex": "#ff69b4",
+   "L": 65.5,
+   "a": 64.2,
+   "b": -10.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "indianred",
+   "name": "indianred",
+   "hex": "#cd5c5c",
+   "L": 53.4,
+   "a": 44.8,
+   "b": 22.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "indigo",
+   "name": "indigo",
+   "hex": "#4b0082",
+   "L": 20.5,
+   "a": 51.7,
+   "b": -53.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "ivory",
+   "name": "ivory",
+   "hex": "#fffff0",
+   "L": 99.6,
+   "a": -2.6,
+   "b": 7.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "khaki",
+   "name": "khaki",
+   "hex": "#f0e68c",
+   "L": 90.3,
+   "a": -9.0,
+   "b": 45.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lavender",
+   "name": "lavender",
+   "hex": "#e6e6fa",
+   "L": 91.8,
+   "a": 3.7,
+   "b": -9.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lavenderblush",
+   "name": "lavenderblush",
+   "hex": "#fff0f5",
+   "L": 96.1,
+   "a": 5.9,
+   "b": -0.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lawngreen",
+   "name": "lawngreen",
+   "hex": "#7cfc00",
+   "L": 88.9,
+   "a": -67.9,
+   "b": 85.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lemonchiffon",
+   "name": "lemonchiffon",
+   "hex": "#fffacd",
+   "L": 97.6,
+   "a": -5.4,
+   "b": 22.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lightblue",
+   "name": "lightblue",
+   "hex": "#add8e6",
+   "L": 83.8,
+   "a": -10.9,
+   "b": -11.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lightcoral",
+   "name": "lightcoral",
+   "hex": "#f08080",
+   "L": 66.2,
+   "a": 42.8,
+   "b": 19.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lightcyan",
+   "name": "lightcyan",
+   "hex": "#e0ffff",
+   "L": 97.9,
+   "a": -9.9,
+   "b": -3.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lightgoldenrodyellow",
+   "name": "lightgoldenrodyellow",
+   "hex": "#fafad2",
+   "L": 97.4,
+   "a": -6.5,
+   "b": 19.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lightgray",
+   "name": "lightgray",
+   "hex": "#d3d3d3",
+   "L": 84.6,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lightgreen",
+   "name": "lightgreen",
+   "hex": "#90ee90",
+   "L": 86.5,
+   "a": -46.3,
+   "b": 36.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lightgrey",
+   "name": "lightgrey",
+   "hex": "#d3d3d3",
+   "L": 84.6,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lightpink",
+   "name": "lightpink",
+   "hex": "#ffb6c1",
+   "L": 81.1,
+   "a": 28.0,
+   "b": 5.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lightsalmon",
+   "name": "lightsalmon",
+   "hex": "#ffa07a",
+   "L": 74.7,
+   "a": 31.5,
+   "b": 34.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lightseagreen",
+   "name": "lightseagreen",
+   "hex": "#20b2aa",
+   "L": 65.8,
+   "a": -37.5,
+   "b": -6.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lightskyblue",
+   "name": "lightskyblue",
+   "hex": "#87cefa",
+   "L": 79.7,
+   "a": -10.8,
+   "b": -28.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lightslategray",
+   "name": "lightslategray",
+   "hex": "#778899",
+   "L": 55.9,
+   "a": -2.2,
+   "b": -11.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lightslategrey",
+   "name": "lightslategrey",
+   "hex": "#778899",
+   "L": 55.9,
+   "a": -2.2,
+   "b": -11.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lightsteelblue",
+   "name": "lightsteelblue",
+   "hex": "#b0c4de",
+   "L": 78.5,
+   "a": -1.3,
+   "b": -15.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lightyellow",
+   "name": "lightyellow",
+   "hex": "#ffffe0",
+   "L": 99.3,
+   "a": -5.1,
+   "b": 14.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "lime",
+   "name": "lime",
+   "hex": "#00ff00",
+   "L": 87.7,
+   "a": -86.2,
+   "b": 83.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "limegreen",
+   "name": "limegreen",
+   "hex": "#32cd32",
+   "L": 72.6,
+   "a": -67.1,
+   "b": 61.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "linen",
+   "name": "linen",
+   "hex": "#faf0e6",
+   "L": 95.3,
+   "a": 1.7,
+   "b": 6.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "magenta",
+   "name": "magenta",
+   "hex": "#ff00ff",
+   "L": 60.3,
+   "a": 98.2,
+   "b": -60.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "maroon",
+   "name": "maroon",
+   "hex": "#800000",
+   "L": 25.5,
+   "a": 48.0,
+   "b": 38.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "mediumaquamarine",
+   "name": "mediumaquamarine",
+   "hex": "#66cdaa",
+   "L": 75.7,
+   "a": -38.3,
+   "b": 8.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "mediumblue",
+   "name": "mediumblue",
+   "hex": "#0000cd",
+   "L": 25.0,
+   "a": 67.2,
+   "b": -91.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "mediumorchid",
+   "name": "mediumorchid",
+   "hex": "#ba55d3",
+   "L": 53.6,
+   "a": 59.1,
+   "b": -47.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "mediumpurple",
+   "name": "mediumpurple",
+   "hex": "#9370db",
+   "L": 55.0,
+   "a": 36.8,
+   "b": -50.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "mediumseagreen",
+   "name": "mediumseagreen",
+   "hex": "#3cb371",
+   "L": 65.3,
+   "a": -48.2,
+   "b": 24.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "mediumslateblue",
+   "name": "mediumslateblue",
+   "hex": "#7b68ee",
+   "L": 52.2,
+   "a": 41.1,
+   "b": -65.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "mediumspringgreen",
+   "name": "mediumspringgreen",
+   "hex": "#00fa9a",
+   "L": 87.3,
+   "a": -70.7,
+   "b": 32.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "mediumturquoise",
+   "name": "mediumturquoise",
+   "hex": "#48d1cc",
+   "L": 76.9,
+   "a": -37.4,
+   "b": -8.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "mediumvioletred",
+   "name": "mediumvioletred",
+   "hex": "#c71585",
+   "L": 44.8,
+   "a": 71.0,
+   "b": -15.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "midnightblue",
+   "name": "midnightblue",
+   "hex": "#191970",
+   "L": 15.9,
+   "a": 31.7,
+   "b": -49.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "mintcream",
+   "name": "mintcream",
+   "hex": "#f5fffa",
+   "L": 99.2,
+   "a": -4.2,
+   "b": 1.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "mistyrose",
+   "name": "mistyrose",
+   "hex": "#ffe4e1",
+   "L": 92.7,
+   "a": 8.7,
+   "b": 4.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "moccasin",
+   "name": "moccasin",
+   "hex": "#ffe4b5",
+   "L": 91.7,
+   "a": 2.4,
+   "b": 26.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "navajowhite",
+   "name": "navajowhite",
+   "hex": "#ffdead",
+   "L": 90.1,
+   "a": 4.5,
+   "b": 28.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "navy",
+   "name": "navy",
+   "hex": "#000080",
+   "L": 13.0,
+   "a": 47.5,
+   "b": -64.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "oldlace",
+   "name": "oldlace",
+   "hex": "#fdf5e6",
+   "L": 96.8,
+   "a": 0.2,
+   "b": 8.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "olive",
+   "name": "olive",
+   "hex": "#808000",
+   "L": 51.9,
+   "a": -12.9,
+   "b": 56.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "olivedrab",
+   "name": "olivedrab",
+   "hex": "#6b8e23",
+   "L": 54.7,
+   "a": -28.2,
+   "b": 49.7,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "orange",
+   "name": "orange",
+   "hex": "#ffa500",
+   "L": 74.9,
+   "a": 23.9,
+   "b": 78.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "orangered",
+   "name": "orangered",
+   "hex": "#ff4500",
+   "L": 57.6,
+   "a": 67.8,
+   "b": 69.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "orchid",
+   "name": "orchid",
+   "hex": "#da70d6",
+   "L": 62.8,
+   "a": 55.3,
+   "b": -34.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "palegoldenrod",
+   "name": "palegoldenrod",
+   "hex": "#eee8aa",
+   "L": 91.1,
+   "a": -7.3,
+   "b": 31.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "palegreen",
+   "name": "palegreen",
+   "hex": "#98fb98",
+   "L": 90.7,
+   "a": -48.3,
+   "b": 38.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "paleturquoise",
+   "name": "paleturquoise",
+   "hex": "#afeeee",
+   "L": 90.1,
+   "a": -19.6,
+   "b": -6.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "palevioletred",
+   "name": "palevioletred",
+   "hex": "#db7093",
+   "L": 60.6,
+   "a": 45.5,
+   "b": 0.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "papayawhip",
+   "name": "papayawhip",
+   "hex": "#ffefd5",
+   "L": 95.1,
+   "a": 1.3,
+   "b": 14.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "peachpuff",
+   "name": "peachpuff",
+   "hex": "#ffdab9",
+   "L": 89.4,
+   "a": 8.1,
+   "b": 21.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "peru",
+   "name": "peru",
+   "hex": "#cd853f",
+   "L": 61.8,
+   "a": 21.4,
+   "b": 47.9,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "pink",
+   "name": "pink",
+   "hex": "#ffc0cb",
+   "L": 83.6,
+   "a": 24.1,
+   "b": 3.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "plum",
+   "name": "plum",
+   "hex": "#dda0dd",
+   "L": 73.4,
+   "a": 32.5,
+   "b": -22.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "powderblue",
+   "name": "powderblue",
+   "hex": "#b0e0e6",
+   "L": 86.1,
+   "a": -14.1,
+   "b": -8.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "purple",
+   "name": "purple",
+   "hex": "#800080",
+   "L": 29.8,
+   "a": 58.9,
+   "b": -36.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "rebeccapurple",
+   "name": "rebeccapurple",
+   "hex": "#663399",
+   "L": 32.9,
+   "a": 42.9,
+   "b": -47.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "red",
+   "name": "red",
+   "hex": "#ff0000",
+   "L": 53.2,
+   "a": 80.1,
+   "b": 67.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "rosybrown",
+   "name": "rosybrown",
+   "hex": "#bc8f8f",
+   "L": 63.6,
+   "a": 17.0,
+   "b": 6.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "royalblue",
+   "name": "royalblue",
+   "hex": "#4169e1",
+   "L": 47.8,
+   "a": 26.3,
+   "b": -65.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "saddlebrown",
+   "name": "saddlebrown",
+   "hex": "#8b4513",
+   "L": 37.5,
+   "a": 26.4,
+   "b": 41.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "salmon",
+   "name": "salmon",
+   "hex": "#fa8072",
+   "L": 67.3,
+   "a": 45.2,
+   "b": 29.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "sandybrown",
+   "name": "sandybrown",
+   "hex": "#f4a460",
+   "L": 74.0,
+   "a": 23.0,
+   "b": 46.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "seagreen",
+   "name": "seagreen",
+   "hex": "#2e8b57",
+   "L": 51.5,
+   "a": -39.7,
+   "b": 20.1,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "seashell",
+   "name": "seashell",
+   "hex": "#fff5ee",
+   "L": 97.1,
+   "a": 2.2,
+   "b": 4.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "sienna",
+   "name": "sienna",
+   "hex": "#a0522d",
+   "L": 43.8,
+   "a": 29.3,
+   "b": 35.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "silver",
+   "name": "silver",
+   "hex": "#c0c0c0",
+   "L": 77.7,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "skyblue",
+   "name": "skyblue",
+   "hex": "#87ceeb",
+   "L": 79.2,
+   "a": -14.8,
+   "b": -21.3,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "slateblue",
+   "name": "slateblue",
+   "hex": "#6a5acd",
+   "L": 45.3,
+   "a": 36.0,
+   "b": -57.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "slategray",
+   "name": "slategray",
+   "hex": "#708090",
+   "L": 52.8,
+   "a": -2.1,
+   "b": -10.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "slategrey",
+   "name": "slategrey",
+   "hex": "#708090",
+   "L": 52.8,
+   "a": -2.1,
+   "b": -10.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "snow",
+   "name": "snow",
+   "hex": "#fffafa",
+   "L": 98.6,
+   "a": 1.7,
+   "b": 0.6,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "springgreen",
+   "name": "springgreen",
+   "hex": "#00ff7f",
+   "L": 88.5,
+   "a": -76.9,
+   "b": 47.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "steelblue",
+   "name": "steelblue",
+   "hex": "#4682b4",
+   "L": 52.5,
+   "a": -4.1,
+   "b": -32.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "tan",
+   "name": "tan",
+   "hex": "#d2b48c",
+   "L": 75.0,
+   "a": 5.0,
+   "b": 24.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "teal",
+   "name": "teal",
+   "hex": "#008080",
+   "L": 48.3,
+   "a": -28.8,
+   "b": -8.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "thistle",
+   "name": "thistle",
+   "hex": "#d8bfd8",
+   "L": 80.1,
+   "a": 13.2,
+   "b": -9.2,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "tomato",
+   "name": "tomato",
+   "hex": "#ff6347",
+   "L": 62.2,
+   "a": 57.9,
+   "b": 46.4,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "turquoise",
+   "name": "turquoise",
+   "hex": "#40e0d0",
+   "L": 81.3,
+   "a": -44.1,
+   "b": -4.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "violet",
+   "name": "violet",
+   "hex": "#ee82ee",
+   "L": 69.7,
+   "a": 56.4,
+   "b": -36.8,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "wheat",
+   "name": "wheat",
+   "hex": "#f5deb3",
+   "L": 89.4,
+   "a": 1.5,
+   "b": 24.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "white",
+   "name": "white",
+   "hex": "#ffffff",
+   "L": 100.0,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "whitesmoke",
+   "name": "whitesmoke",
+   "hex": "#f5f5f5",
+   "L": 96.5,
+   "a": -0.0,
+   "b": 0.0,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "yellow",
+   "name": "yellow",
+   "hex": "#ffff00",
+   "L": 97.1,
+   "a": -21.6,
+   "b": 94.5,
+   "method": "derived_from_hex"
+  },
+  {
+   "code": "yellowgreen",
+   "name": "yellowgreen",
+   "hex": "#9acd32",
+   "L": 76.5,
+   "a": -38.0,
+   "b": 66.6,
+   "method": "derived_from_hex"
+  }
+ ]
+}

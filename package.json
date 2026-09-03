@@ -1,0 +1,14 @@
+{
+  "name": "colorreader",
+  "version": "1.0.0",
+  "description": "Web Bluetooth color-matching app for the Datacolor ColorReader — scan a color and match it to RAL, Pantone, NCS, Munsell and paint-fandeck standards.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/web-bluetooth": "^0.0.21",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>ColorReader</title>
+<link rel="icon" href="data:,">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">ColorReader</div>
+  <div class="actions">
+    <button id="pair" class="pill">Pair</button>
+    <button id="calibrate" class="pill ghost">Calibrate</button>
+    <button id="install" class="pill ghost" hidden>Install</button>
+  </div>
+</header>
+
+<main>
+  <button id="match" class="match-btn">
+    <span class="spinner" aria-hidden="true"></span>
+    <span class="label">Match Color</span>
+  </button>
+
+  <div id="result" class="result combo" hidden>
+    <div class="combo-swatch">
+      <div id="scan-swatch" class="combo-scan">
+        <span class="combo-tag">Your scan · <span id="scan-lab" class="mono"></span><a
+          class="info" href="https://en.wikipedia.org/wiki/CIELAB_color_space"
+          target="_blank" rel="noopener"
+          title="CIELAB (L*a*b*) — the device-independent color space your scan is measured in. Opens Wikipedia.">&#9432;</a></span>
+      </div>
+      <div id="match-swatch" class="combo-match"></div>
+    </div>
+    <div id="hero-match" class="combo-info">
+      <div class="match-head">
+        <span class="match-name" id="match-name"></span>
+        <span id="cal-warn-badge" class="warn-badge" hidden
+          title="This scan was taken under an unreliable calibration (reference ΔE &gt; 1 from white). Colors may be inaccurate — recalibrate with the cap on.">⚠</span>
+      </div>
+      <div class="muted" id="match-code"></div>
+      <div class="closeness">
+        <div id="match-meter" class="meter"><span></span></div>
+        <div id="match-close" class="close-label"></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Matches</h2>
+      <span id="data-count" class="muted small"></span>
+    </div>
+    <div id="gallery" class="gallery"></div>
+  </section>
+
+  <section class="panel">
+    <details>
+      <summary>Filter color systems</summary>
+      <div id="filter-list" class="filter-list"></div>
+    </details>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>History</h2>
+      <button id="clear-history" class="pill ghost small">Clear</button>
+    </div>
+    <div id="history-list" class="history-list"></div>
+  </section>
+</main>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script type="module" src="./dist/app.js"></script>
+</body>
+</html>

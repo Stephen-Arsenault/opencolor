@@ -1,5 +1,13 @@
+# Local-only material (RE captures, desktop drivers, data-collection workspace)
+archive/
+
+# Dependencies (reinstall with `npm ci`)
 node_modules/
-dist/
-venv/
+
+# OS / editor / tooling cruft
+.DS_Store
+._.*
+.playwright-mcp/
 __pycache__/
 *.pyc
+venv/
