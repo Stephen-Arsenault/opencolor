@@ -1,5 +1,5 @@
 /**
- * Datacolor ColorReader (PCE-1 / "Model Y") — BRSP driver over Web Bluetooth.
+ * Datacolor ColorReader (CR100) — BRSP driver over Web Bluetooth.
  *
  * Protocol reverse-engineered from Apple PacketLogger captures of the official
  * app. The reference Python driver and the annotated protocol write-up are kept

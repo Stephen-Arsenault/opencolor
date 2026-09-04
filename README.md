@@ -1,7 +1,7 @@
 # OpenColor
 
-A Web Bluetooth app for the **Datacolor ColorReader** (PCE-1 / "Model Y")
-colorimeter. Pair the device, scan a physical color, and match the measured
+A Web Bluetooth app for the **Datacolor ColorReader** (CR100) colorimeter.
+Pair the device, scan a physical color, and match the measured
 CIELAB against named color standards — RAL, Pantone, NCS, Munsell, and paint
 fandecks (Sherwin-Williams, Benjamin Moore) — ranked by CIEDE2000 color
 difference. Installable as a PWA.
@@ -31,18 +31,6 @@ To rebuild the TypeScript after editing `src/`:
 npm ci
 npm run build        # tsc → dist/
 ```
-
-## Deploy (Cloudflare Pages)
-
-The repo root **is** the site. Because `dist/` and `data/` are committed, Pages
-needs no build:
-
-- Framework preset: **None**
-- Build command: *(empty)*
-- Build output directory: **/**
-
-(If you'd rather build on Pages, set the build command to `npm ci && npm run
-build` and keep the output directory at `/`.)
 
 ## Layout
 
@@ -77,9 +65,3 @@ regenerate with `archive/build-data.py`.
   calibration are marked in the result and history.
 - **Scan value** comes from the device's `0x95` Lab read (measured sample color,
   confirmed by real-device testing), surfaced through `ColorReader.scan()`.
-
-## `archive/` (gitignored)
-
-Local-only material kept out of the deployed app: the reverse-engineering report,
-the reference Python drivers, PacketLogger captures, the data-collection
-workspace, and the Node replay test.
