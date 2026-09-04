@@ -1,0 +1,54 @@
+# OpenColor
+
+> OpenColor is a free browser app and open API that matches a measured color
+> (CIELAB) to named color standards — RAL, Pantone, NCS, Munsell, and paint
+> fandecks (Sherwin-Williams, Benjamin Moore). It reads a Datacolor ColorReader
+> (CR100) colorimeter directly over Web Bluetooth, and also works as a standalone
+> color-lookup API that anyone (or any agent) can query with L*a*b* values.
+
+## What it does
+
+- Reads CIELAB (L*, a*, b*) from a Datacolor ColorReader over Web Bluetooth in
+  Chrome/Edge (desktop or Android). The same CR100 hardware is white-labeled by
+  paint brands (PPG, Benjamin Moore, RAL, Dunn-Edwards, Caparol, Tikkurila,
+  Dulux, Sherwin-Williams, Lechler); those should work too, though only the
+  Datacolor unit is verified.
+- Finds the nearest named colors across ~11,400 references in 8 systems, ranked
+  by CIEDE2000 color difference.
+
+## API (no key, CORS-open)
+
+Match a CIELAB color to the nearest standards:
+
+`GET https://opencolor.app/api/match?L=<0-100>&a=<number>&b=<number>`
+
+Optional query params:
+- `mode=per-system` (default; best match in each system, ranked) or `mode=pooled`
+  (top-N nearest overall)
+- `limit=<1-50>`
+- `system=<id>` to restrict to one system (ids in /data/index.json)
+
+Examples:
+- https://opencolor.app/api/match?L=53.24&a=80.09&b=67.20
+- https://opencolor.app/api/match?L=93.9&a=0.1&b=1.7&mode=pooled&limit=5
+- https://opencolor.app/api/match?L=45&a=60&b=35&system=ral_classic&limit=10
+
+Each match returns: `system`, `systemId`, `code`, `name`, `hex`, `L`, `a`, `b`,
+and `deltaE` (CIEDE2000).
+
+## Datasets (CIELAB, D65/2° observer)
+
+- All colors in one file: https://opencolor.app/data/all.json
+- Index of systems + per-system files: https://opencolor.app/data/index.json
+- Per-system: https://opencolor.app/data/<systemId>.json
+
+Systems: CSS named colors, RAL Classic, Pantone PMS Coated (C), Pantone PMS
+Uncoated (U), NCS (Natural Color System), Munsell, Sherwin-Williams, Benjamin
+Moore. Some CIELAB values are published by the source; others are derived from
+published sRGB hex (each entry has a `method` field).
+
+## Notes
+
+- The app runs entirely client-side; scans and history stay in the browser.
+- On-screen swatches are approximations (sRGB gamut); the numeric CIELAB and
+  CIEDE2000 values are authoritative.

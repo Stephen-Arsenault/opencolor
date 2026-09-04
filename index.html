@@ -8,6 +8,70 @@
 <link rel="icon" href="data:,">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="stylesheet" href="./styles.css">
+
+<meta name="description" content="Match colors to RAL, Pantone, NCS, Munsell and paint fandecks in your browser. OpenColor reads a Datacolor ColorReader (CR100) over Bluetooth and returns the nearest color standards by CIEDE2000 — no vendor app needed.">
+<meta name="keywords" content="Datacolor ColorReader, Color Reader, CR100, CRM100, PPG ColorReader, Benjamin Moore ColorReader, RAL Color Reader, Dunn-Edwards InstaColor, Dulux ColorReader, Tikkurila ColorReader, Caparol ColorReader, Sherwin-Williams ColorReader, Web Bluetooth colorimeter, CIELAB color matching, RAL Pantone NCS Munsell lookup, use ColorReader without app, connect ColorReader to web app">
+<link rel="canonical" href="https://opencolor.app/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OpenColor">
+<meta property="og:title" content="OpenColor — scan a color, match it to any standard">
+<meta property="og:description" content="A browser app that reads a Datacolor ColorReader over Bluetooth and matches colors to RAL, Pantone, NCS, Munsell and paint fandecks.">
+<meta property="og:url" content="https://opencolor.app/">
+<meta property="og:image" content="https://opencolor.app/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OpenColor — scan a color, match it to any standard">
+<meta name="twitter:description" content="Reads a Datacolor ColorReader over Web Bluetooth and matches colors to RAL, Pantone, NCS, Munsell and paint fandecks. Free, open API.">
+<meta name="twitter:image" content="https://opencolor.app/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "OpenColor",
+  "url": "https://opencolor.app/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Chrome or Edge (desktop or Android)",
+  "browserRequirements": "Requires Web Bluetooth",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "description": "Reads a Datacolor ColorReader (CR100) colorimeter over Web Bluetooth and matches the measured CIELAB color to named standards — RAL, Pantone, NCS, Munsell, Sherwin-Williams and Benjamin Moore — ranked by CIEDE2000.",
+  "featureList": [
+    "Reads CIELAB over Web Bluetooth from a Datacolor ColorReader",
+    "Matches to RAL, Pantone, NCS, Munsell and paint fandecks",
+    "Open color-match API and downloadable datasets",
+    "Installable PWA, runs client-side"
+  ],
+  "keywords": "Datacolor ColorReader, CR100, PPG ColorReader, Benjamin Moore ColorReader, RAL Color Reader, Dunn-Edwards InstaColor, color matching, CIELAB"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I use a Datacolor ColorReader without the vendor app?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. OpenColor connects to the Datacolor ColorReader directly from Chrome or Edge over Web Bluetooth — no vendor app or account needed — and matches the reading to RAL, Pantone, NCS, Munsell and paint-fandeck standards." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with rebranded ColorReaders like PPG, Benjamin Moore or RAL?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Those paint-brand devices are the same Datacolor CR100 hardware, so they should work with OpenColor. Only the Datacolor-branded unit has been verified so far." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does OpenColor work on iPhone?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Web Bluetooth is not available in Safari or any iOS browser, so scanning is not possible on iPhone or iPad. Use Chrome or Edge on Android or a desktop." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there an API to match a CIELAB color to standards?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. GET https://opencolor.app/api/match?L=53.2&a=80.1&b=67.2 returns the nearest color standards by CIEDE2000 as JSON. The full dataset is at https://opencolor.app/data/all.json." }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -73,6 +137,49 @@
     <div id="history-list" class="history-list"></div>
   </section>
 </main>
+
+<footer class="site-footer">
+  <h2>About OpenColor</h2>
+  <p>OpenColor is a free browser app that reads a <strong>Datacolor ColorReader</strong>
+  (CR100) colorimeter over Web Bluetooth and matches the measured CIELAB color to named
+  standards — RAL Classic, Pantone (PMS Coated &amp; Uncoated), NCS, Munsell, and paint
+  fandecks from Sherwin-Williams and Benjamin Moore — ranked by CIEDE2000. No vendor app
+  or account required.</p>
+
+  <h2>Works with</h2>
+  <p>The Datacolor ColorReader is sold under several paint-brand labels built on the same
+  CR100 hardware — <strong>PPG</strong>, <strong>Benjamin Moore</strong>, <strong>RAL</strong>,
+  <strong>Dunn-Edwards</strong> (InstaColor), Caparol, Tikkurila, Dulux, Sherwin-Williams and
+  Lechler. These should work with OpenColor, though only the Datacolor-branded unit has been
+  verified. Requires Chrome or Edge on desktop or Android — Web Bluetooth is not available on
+  iPhone or iPad.</p>
+
+  <h2>For developers &amp; AI agents</h2>
+  <p>Match a CIELAB color through the open, key-free API:
+  <code>/api/match?L=53.2&amp;a=80.1&amp;b=67.2</code> (JSON, CORS-open). Download the full
+  dataset at <a href="/data/all.json">/data/all.json</a>, or read <a href="/llms.txt">llms.txt</a>
+  for the overview.</p>
+
+  <h2>FAQ</h2>
+  <details><summary>Can I use a Datacolor ColorReader without the vendor app?</summary>
+  <p>Yes — OpenColor connects to the ColorReader directly from Chrome or Edge over Web
+  Bluetooth and matches the reading to RAL, Pantone, NCS, Munsell and paint-fandeck standards.
+  No vendor app or account needed.</p></details>
+  <details><summary>Does it work with rebranded ColorReaders (PPG, Benjamin Moore, RAL…)?</summary>
+  <p>Those are the same Datacolor CR100 hardware, so they should work. Only the Datacolor unit
+  has been verified so far.</p></details>
+  <details><summary>Does OpenColor work on iPhone?</summary>
+  <p>No. Web Bluetooth isn't available in Safari or any iOS browser, so scanning isn't possible
+  on iPhone or iPad. Use Chrome or Edge on Android or a desktop.</p></details>
+  <details><summary>Is there an API to match a CIELAB color to standards?</summary>
+  <p>Yes: <code>GET /api/match?L=53.2&amp;a=80.1&amp;b=67.2</code> returns the nearest standards
+  by CIEDE2000 as JSON. The full dataset is at <code>/data/all.json</code>.</p></details>
+
+  <p class="fine">Runs entirely in your browser — scans and history stay on your device.
+  On-screen swatches are sRGB approximations; the CIELAB and CIEDE2000 values are authoritative.
+  Not affiliated with Datacolor or any paint brand; product names are trademarks of their
+  respective owners.</p>
+</footer>
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
