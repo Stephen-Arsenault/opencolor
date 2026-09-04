@@ -33,6 +33,9 @@ Examples:
 - https://opencolor.app/api/match?L=93.9&a=0.1&b=1.7&mode=pooled&limit=5
 - https://opencolor.app/api/match?L=45&a=60&b=35&system=ral_classic&limit=10
 
+OpenAPI spec: https://opencolor.app/openapi.json — full reference:
+https://opencolor.app/llms-full.txt
+
 Each match returns: `system`, `systemId`, `code`, `name`, `hex`, `L`, `a`, `b`,
 and `deltaE` (CIEDE2000).
 

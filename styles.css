@@ -320,6 +320,27 @@ summary { cursor: pointer; font-weight: 600; font-size: 0.92rem; }
 .toast.warn { background: #f5b301; color: #1b2330; font-weight: 500; } /* yellow warning */
 .toast.error { background: #dc2626; color: #fff; font-weight: 500; }
 
+/* ---------- landing pages ---------- */
+.lp h1 { font-size: 1.7rem; letter-spacing: -0.02em; margin: 0.25rem 0 0.5rem; }
+.lp .lead { font-size: 1.05rem; color: var(--muted); line-height: 1.55; margin: 0 0 1rem; }
+.lp .panel h2 { margin: 0 0 0.6rem; font-size: 1.05rem; }
+.lp .panel p { margin: 0.4rem 0; line-height: 1.55; }
+.lp .panel details { margin: 0.35rem 0; }
+.lp .panel summary { cursor: pointer; font-weight: 500; }
+.lp .panel summary + p { color: var(--muted); }
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  border: 1px solid #1d4ed8;
+  box-shadow: var(--shadow);
+}
+.cta:hover { background: #1d4ed8; }
+
 /* ---------- SEO / info footer ---------- */
 .site-footer {
   max-width: 48rem;

@@ -1,0 +1,63 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OpenColor Match API",
+    "version": "1.0.0",
+    "description": "Match a CIELAB (D65/2°) color to the nearest named color standards (RAL, Pantone, NCS, Munsell, CSS, Sherwin-Williams, Benjamin Moore) ranked by CIEDE2000. No API key; CORS-open.",
+    "contact": { "email": "hello@opencolor.app" }
+  },
+  "servers": [{ "url": "https://opencolor.app" }],
+  "paths": {
+    "/api/match": {
+      "get": {
+        "operationId": "matchColor",
+        "summary": "Find the nearest color standards to a CIELAB color",
+        "parameters": [
+          { "name": "L", "in": "query", "required": true, "schema": { "type": "number", "minimum": 0, "maximum": 100 }, "description": "CIELAB lightness L* (0–100)." },
+          { "name": "a", "in": "query", "required": true, "schema": { "type": "number" }, "description": "CIELAB a* (green–red)." },
+          { "name": "b", "in": "query", "required": true, "schema": { "type": "number" }, "description": "CIELAB b* (blue–yellow)." },
+          { "name": "mode", "in": "query", "required": false, "schema": { "type": "string", "enum": ["per-system", "pooled"], "default": "per-system" }, "description": "per-system: best match in each system, ranked. pooled: top-N nearest overall." },
+          { "name": "limit", "in": "query", "required": false, "schema": { "type": "integer", "minimum": 1, "maximum": 50 }, "description": "Maximum matches to return." },
+          { "name": "system", "in": "query", "required": false, "schema": { "type": "string" }, "description": "Restrict to one system id (see /data/index.json), returning its top-N." }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ranked matches.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "query": { "type": "object", "properties": { "L": { "type": "number" }, "a": { "type": "number" }, "b": { "type": "number" } } },
+                    "colorSpace": { "type": "string", "example": "CIELAB D65/2°" },
+                    "deltaE": { "type": "string", "example": "CIEDE2000" },
+                    "mode": { "type": "string" },
+                    "count": { "type": "integer" },
+                    "matches": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "system": { "type": "string" },
+                          "systemId": { "type": "string" },
+                          "code": { "type": "string" },
+                          "name": { "type": "string" },
+                          "hex": { "type": "string" },
+                          "L": { "type": "number" },
+                          "a": { "type": "number" },
+                          "b": { "type": "number" },
+                          "deltaE": { "type": "number" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": { "description": "Missing or non-numeric L/a/b." }
+        }
+      }
+    }
+  }
+}

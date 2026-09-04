@@ -1,4 +1,17 @@
-# Let browsers and agents fetch the datasets cross-origin.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+
+# Let browsers and agents fetch the datasets and API spec cross-origin.
 /data/*
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=3600
+/openapi.json
+  Access-Control-Allow-Origin: *
+
+# Long-cache immutable build output and icons.
+/dist/*
+  Cache-Control: public, max-age=86400
+/icons/*
+  Cache-Control: public, max-age=604800

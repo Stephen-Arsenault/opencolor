@@ -4,8 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#ffffff">
-<title>OpenColor</title>
-<link rel="icon" href="data:,">
+<title>OpenColor — match a color to RAL, Pantone, NCS &amp; more</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icons/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="stylesheet" href="./styles.css">
 
@@ -69,6 +71,20 @@
       "name": "Is there an API to match a CIELAB color to standards?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. GET https://opencolor.app/api/match?L=53.2&a=80.1&b=67.2 returns the nearest color standards by CIEDE2000 as JSON. The full dataset is at https://opencolor.app/data/all.json." }
     }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "OpenColor color-standard CIELAB dataset",
+  "description": "CIELAB (D65/2 degree) values for ~11,400 named colors across CSS, RAL Classic, Pantone (Coated and Uncoated), NCS, Munsell, Sherwin-Williams and Benjamin Moore, for color matching by CIEDE2000.",
+  "url": "https://opencolor.app/",
+  "keywords": ["CIELAB", "color matching", "RAL", "Pantone", "NCS", "Munsell", "color standards"],
+  "creator": { "@type": "Organization", "name": "OpenColor" },
+  "distribution": [
+    { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://opencolor.app/data/all.json" }
   ]
 }
 </script>
@@ -148,11 +164,13 @@
 
   <h2>Works with</h2>
   <p>The Datacolor ColorReader is sold under several paint-brand labels built on the same
-  CR100 hardware — <strong>PPG</strong>, <strong>Benjamin Moore</strong>, <strong>RAL</strong>,
-  <strong>Dunn-Edwards</strong> (InstaColor), Caparol, Tikkurila, Dulux, Sherwin-Williams and
-  Lechler. These should work with OpenColor, though only the Datacolor-branded unit has been
-  verified. Requires Chrome or Edge on desktop or Android — Web Bluetooth is not available on
-  iPhone or iPad.</p>
+  CR100 hardware — <a href="/ppg-colorreader">PPG</a>, <a href="/benjamin-moore-colorreader">Benjamin
+  Moore</a>, <a href="/ral-color-reader">RAL</a>, <a href="/dunn-edwards-instacolor">Dunn-Edwards</a>,
+  <a href="/caparol-colorreader">Caparol</a>, <a href="/tikkurila-colorreader">Tikkurila</a>,
+  <a href="/dulux-colorreader">Dulux</a>, <a href="/sherwin-williams-colorreader">Sherwin-Williams</a>
+  and <a href="/lechler-colorreader">Lechler</a>. These are the same hardware and should work with
+  OpenColor, though only the Datacolor-branded unit has been verified. Requires Chrome or Edge on
+  desktop or Android — Web Bluetooth is not available on iPhone or iPad.</p>
 
   <h2>For developers &amp; AI agents</h2>
   <p>Match a CIELAB color through the open, key-free API:

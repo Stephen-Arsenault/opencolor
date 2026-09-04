@@ -1,0 +1,83 @@
+# OpenColor — full reference
+
+OpenColor is a free browser app and open API that matches a measured color
+(CIELAB, D65/2°) to named color standards, ranked by CIEDE2000. It reads a
+Datacolor ColorReader (CR100) colorimeter over Web Bluetooth, and works as a
+standalone color-lookup service for any client or agent.
+
+## Capabilities
+
+- Read CIELAB from a Datacolor ColorReader (and its paint-brand rebrands built on
+  the same CR100 hardware) over Web Bluetooth in Chrome/Edge (desktop or Android).
+- Match a CIELAB color to the nearest standards across ~11,400 references in eight
+  systems: CSS named colors, RAL Classic, Pantone PMS Coated (C), Pantone PMS
+  Uncoated (U), NCS, Munsell, Sherwin-Williams, Benjamin Moore.
+
+## Match API
+
+Endpoint: `GET https://opencolor.app/api/match`
+OpenAPI spec: https://opencolor.app/openapi.json
+Auth: none. CORS: `Access-Control-Allow-Origin: *`.
+
+Query params:
+- `L` (required, 0–100), `a` (required), `b` (required) — CIELAB D65/2°.
+- `mode` — `per-system` (default; best match per system, ranked) or `pooled`
+  (top-N nearest overall).
+- `limit` — 1–50.
+- `system` — restrict to one system id (ids in /data/index.json).
+
+Example request:
+`https://opencolor.app/api/match?L=53.24&a=80.09&b=67.20&limit=2`
+
+Example response:
+```json
+{
+  "query": { "L": 53.24, "a": 80.09, "b": 67.2 },
+  "colorSpace": "CIELAB D65/2°",
+  "deltaE": "CIEDE2000",
+  "mode": "per-system",
+  "count": 2,
+  "matches": [
+    { "system": "CSS Named Colors (X11/HTML)", "systemId": "css_named",
+      "code": "red", "name": "red", "hex": "#ff0000",
+      "L": 53.2, "a": 80.1, "b": 67.2, "deltaE": 0.04 },
+    { "system": "RAL Classic", "systemId": "ral_classic",
+      "code": "RAL 3026", "name": "Luminous bright red", "hex": "#FF0000",
+      "L": 53.2, "a": 80.1, "b": 67.2, "deltaE": 0.04 }
+  ]
+}
+```
+
+## Datasets
+
+- All colors, one file: https://opencolor.app/data/all.json
+- Index of systems + per-system files: https://opencolor.app/data/index.json
+- Per-system: https://opencolor.app/data/<systemId>.json
+
+Each color: `{ system, systemId, code, name, hex, L, a, b, method }`. CIELAB is
+D65/2°. `method` is `published` (from the source) or `derived_from_hex`.
+
+## Device compatibility
+
+The same CR100 hardware is white-labeled by paint brands. Per-device pages:
+- https://opencolor.app/datacolor-colorreader
+- https://opencolor.app/ppg-colorreader
+- https://opencolor.app/benjamin-moore-colorreader
+- https://opencolor.app/ral-color-reader
+- https://opencolor.app/dunn-edwards-instacolor
+- https://opencolor.app/caparol-colorreader
+- https://opencolor.app/tikkurila-colorreader
+- https://opencolor.app/dulux-colorreader
+- https://opencolor.app/sherwin-williams-colorreader
+- https://opencolor.app/lechler-colorreader
+
+Only the Datacolor-branded unit is formally verified; the rebrands share the
+hardware and should work.
+
+## Notes
+
+- Client-side app: scans and history stay in the browser.
+- iOS cannot scan (no Web Bluetooth in WebKit); use Chrome/Edge on Android or desktop.
+- On-screen swatches are sRGB approximations; the CIELAB and CIEDE2000 values are authoritative.
+- Proprietary standards (Pantone, RAL, NCS) belong to their owners; values here are approximations for interoperability.
+- Contact: hello@opencolor.app

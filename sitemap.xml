@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://opencolor.app/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://opencolor.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://opencolor.app/datacolor-colorreader</loc><priority>0.8</priority></url>
+  <url><loc>https://opencolor.app/ppg-colorreader</loc><priority>0.8</priority></url>
+  <url><loc>https://opencolor.app/benjamin-moore-colorreader</loc><priority>0.8</priority></url>
+  <url><loc>https://opencolor.app/ral-color-reader</loc><priority>0.8</priority></url>
+  <url><loc>https://opencolor.app/dunn-edwards-instacolor</loc><priority>0.8</priority></url>
+  <url><loc>https://opencolor.app/caparol-colorreader</loc><priority>0.8</priority></url>
+  <url><loc>https://opencolor.app/tikkurila-colorreader</loc><priority>0.8</priority></url>
+  <url><loc>https://opencolor.app/dulux-colorreader</loc><priority>0.8</priority></url>
+  <url><loc>https://opencolor.app/sherwin-williams-colorreader</loc><priority>0.8</priority></url>
+  <url><loc>https://opencolor.app/lechler-colorreader</loc><priority>0.8</priority></url>
 </urlset>
