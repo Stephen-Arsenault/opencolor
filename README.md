@@ -1,4 +1,4 @@
-# ColorReader
+# OpenColor
 
 A Web Bluetooth app for the **Datacolor ColorReader** (PCE-1 / "Model Y")
 colorimeter. Pair the device, scan a physical color, and match the measured
@@ -6,8 +6,8 @@ CIELAB against named color standards — RAL, Pantone, NCS, Munsell, and paint
 fandecks (Sherwin-Williams, Benjamin Moore) — ranked by CIEDE2000 color
 difference. Installable as a PWA.
 
-> **Working title.** "ColorReader" is Datacolor's own product name; this is a
-> placeholder pending a distinct brand.
+Hosted at **opencolor.app** (`.app` forces HTTPS, which the Web Bluetooth and
+service-worker secure-context requirements both need).
 
 ## Requirements
 

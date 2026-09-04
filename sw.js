@@ -1,11 +1,11 @@
 /**
- * ColorReader service worker.
+ * OpenColor service worker.
  * - Precache the app shell so it launches offline.
  * - Reference datasets (data/*.json): stale-while-revalidate — instant from
  *   cache, refreshed in the background as the dataset grows.
  * Bump CACHE when shipping new assets to force an update.
  */
-const CACHE = 'colorreader-v2';
+const CACHE = 'opencolor-v1';
 const SHELL = [
   './',
   './index.html',

@@ -1,5 +1,5 @@
 /**
- * ColorReader match app — UI controller.
+ * OpenColor match app — UI controller.
  *
  * Flow: Pair connects once and stays connected; Match Color runs a scan on the
  * live link and ranks it against the reference datasets; results show as a hero

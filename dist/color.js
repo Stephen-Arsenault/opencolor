@@ -1,5 +1,5 @@
 /**
- * Color-science helpers for the ColorReader match app.
+ * Color-science helpers for the OpenColor match app.
  *
  * - labToRgb: render a CIELAB value as an approximate on-screen sRGB swatch (D65/2°).
  * - ciede2000: perceptual color difference ΔE00 between two Lab values.

@@ -1,7 +1,7 @@
 {
-  "name": "ColorReader",
-  "short_name": "ColorReader",
-  "description": "Scan a color and match it to RAL, Pantone, NCS, Munsell and more.",
+  "name": "OpenColor",
+  "short_name": "OpenColor",
+  "description": "Scan a color and match it to RAL, Pantone, NCS, Munsell and paint-fandeck standards.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

@@ -1,7 +1,7 @@
 {
-  "name": "colorreader",
+  "name": "opencolor",
   "version": "1.0.0",
-  "description": "Web Bluetooth color-matching app for the Datacolor ColorReader — scan a color and match it to RAL, Pantone, NCS, Munsell and paint-fandeck standards.",
+  "description": "OpenColor — Web Bluetooth color-matching app for the Datacolor ColorReader. Scan a color and match it to RAL, Pantone, NCS, Munsell and paint-fandeck standards.",
   "private": true,
   "type": "module",
   "scripts": {
