@@ -75,9 +75,8 @@ regenerate with `archive/build-data.py`.
   calibrate ACK is authoritative (success vs. failure); a calibration that reads
   more than ΔE 1 from the reference white is flagged, and scans taken under a bad
   calibration are marked in the result and history.
-- **Open item:** it is not yet confirmed whether the device's `0x95` read returns
-  the measured sample's Lab or the active calibration reference's. The scan value
-  comes from a single method (`ColorReader.scan()`) if that needs to change.
+- **Scan value** comes from the device's `0x95` Lab read (measured sample color,
+  confirmed by real-device testing), surfaced through `ColorReader.scan()`.
 
 ## `archive/` (gitignored)
 
