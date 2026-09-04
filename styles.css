@@ -63,6 +63,20 @@ html, body {
 .pill.is-connected { border-color: var(--green); color: var(--green); background: #edf8f3; }
 .pill.is-disconnected { border-color: var(--amber); color: var(--amber); background: #fdf6e8; }
 
+/* ---------- unsupported-browser banner ---------- */
+.banner {
+  max-width: 48rem;
+  width: calc(100% - 2.5rem);
+  margin: 0.85rem auto 0;
+  padding: 0.7rem 1rem;
+  background: #fdf6e8;
+  border: 1px solid #f3d998;
+  color: #8a6300;
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
 /* ---------- layout ---------- */
 main {
   max-width: 48rem;

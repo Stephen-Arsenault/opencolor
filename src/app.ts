@@ -68,10 +68,35 @@ async function ensureConnected(): Promise<void> {
 }
 
 // --------------------------------------------------------------------------
+// Browser support (Web Bluetooth). iOS/iPadOS never expose it — every iOS
+// browser is WebKit, which has no Web Bluetooth — so explain *why*, not just
+// "unsupported". iPadOS masquerades as macOS, hence the touch-point check.
+// --------------------------------------------------------------------------
+
+const hasBluetooth = () => 'bluetooth' in navigator;
+const isIOS = () =>
+  /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+function browserWarning(): string {
+  return isIOS()
+    ? 'iPhone and iPad can’t scan — Apple doesn’t allow Web Bluetooth in any iOS browser. Open OpenColor in Chrome or Edge on Android or a computer.'
+    : 'This browser doesn’t support Web Bluetooth. Use Chrome or Edge on desktop or Android.';
+}
+
+/** Guard for the device actions; shows the reason and blocks if unsupported. */
+function bluetoothReady(): boolean {
+  if (hasBluetooth()) return true;
+  toast(browserWarning(), 'warn');
+  return false;
+}
+
+// --------------------------------------------------------------------------
 // Actions
 // --------------------------------------------------------------------------
 
 async function onPair() {
+  if (!bluetoothReady()) return;
   if (reader.connected) {
     await reader.disconnect();
     setConn('idle');
@@ -85,6 +110,7 @@ async function onPair() {
 }
 
 async function onMatch() {
+  if (!bluetoothReady()) return;
   const btn = $('match') as HTMLButtonElement;
   btn.disabled = true;
   // Only reveal the spinner if the scan is actually slow (>1s), to signal work.
@@ -106,6 +132,7 @@ async function onMatch() {
 }
 
 async function onCalibrate() {
+  if (!bluetoothReady()) return;
   const btn = $('calibrate') as HTMLButtonElement;
   btn.disabled = true;
   try {
@@ -436,10 +463,13 @@ async function boot() {
   // logs every raw TX/RX frame (used to find the cap-on/off discriminator).
   (window as unknown as Record<string, unknown>).ColorReader = ColorReader;
 
-  if (!('bluetooth' in navigator)) {
-    toast('Web Bluetooth unavailable — use Chrome/Edge on desktop or Android.');
-    ($('match') as HTMLButtonElement).disabled = true;
-    ($('pair') as HTMLButtonElement).disabled = true;
+  // Unsupported browser (notably any iOS browser): show a persistent banner
+  // explaining why. Buttons stay clickable so tapping them re-surfaces the
+  // reason rather than doing nothing.
+  if (!hasBluetooth()) {
+    const banner = $('browser-banner');
+    banner.textContent = browserWarning();
+    banner.hidden = false;
   }
 
   renderHistory(loadHistory());
