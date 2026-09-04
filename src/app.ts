@@ -420,6 +420,18 @@ async function boot() {
     renderHistory([]);
   };
 
+  // Footer modals (About / Legal): open on click, close on backdrop click.
+  document.querySelectorAll<HTMLElement>('[data-modal]').forEach((el) => {
+    el.addEventListener('click', () => {
+      (document.getElementById(el.dataset.modal!) as HTMLDialogElement | null)?.showModal();
+    });
+  });
+  document.querySelectorAll<HTMLDialogElement>('dialog.modal').forEach((dlg) => {
+    dlg.addEventListener('click', (e) => {
+      if (e.target === dlg) dlg.close();
+    });
+  });
+
   // Expose the driver for console protocol debugging: `ColorReader.debug = true`
   // logs every raw TX/RX frame (used to find the cap-on/off discriminator).
   (window as unknown as Record<string, unknown>).ColorReader = ColorReader;

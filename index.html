@@ -176,10 +176,65 @@
   by CIEDE2000 as JSON. The full dataset is at <code>/data/all.json</code>.</p></details>
 
   <p class="fine">Runs entirely in your browser — scans and history stay on your device.
-  On-screen swatches are sRGB approximations; the CIELAB and CIEDE2000 values are authoritative.
-  Not affiliated with Datacolor or any paint brand; product names are trademarks of their
-  respective owners.</p>
+  On-screen swatches are sRGB approximations; the CIELAB and CIEDE2000 values are authoritative.</p>
+
+  <p class="footer-links">
+    <button type="button" class="linkish" data-modal="about-modal">About</button>
+    <span aria-hidden="true">·</span>
+    <button type="button" class="linkish" data-modal="legal-modal">Legal &amp; Trademarks</button>
+    <span class="copy">© 2026 OpenColor</span>
+  </p>
 </footer>
+
+<dialog id="about-modal" class="modal">
+  <div class="modal-head"><h2>About OpenColor</h2><form method="dialog"><button class="modal-x" aria-label="Close">✕</button></form></div>
+  <div class="modal-body">
+    <p>OpenColor is a free, independent web app that turns a <strong>Datacolor ColorReader</strong>
+    (and the paint-brand rebrands built on the same CR100 hardware) into a cross-standard color
+    matcher — no vendor app or account required.</p>
+    <p>It connects to the device over <strong>Web Bluetooth</strong> in Chrome or Edge, reads the
+    measured CIELAB value, and finds the nearest named colors across ~11,400 references in eight
+    systems (CSS, RAL Classic, Pantone C/U, NCS, Munsell, Sherwin-Williams, Benjamin Moore),
+    ranked by CIEDE2000. It’s installable as a PWA and works offline for browsing.</p>
+    <p><strong>Privacy:</strong> everything runs client-side — your scans and history stay on your
+    device and are never uploaded.</p>
+    <p><strong>For developers &amp; agents:</strong> an open, key-free match API
+    (<code>/api/match</code>) and downloadable datasets (<a href="/data/all.json">/data/all.json</a>,
+    <a href="/llms.txt">llms.txt</a>) are available.</p>
+    <p class="fine">Requires Chrome or Edge on desktop or Android. Web Bluetooth is unavailable on
+    iPhone and iPad.</p>
+  </div>
+</dialog>
+
+<dialog id="legal-modal" class="modal">
+  <div class="modal-head"><h2>Legal &amp; Trademarks</h2><form method="dialog"><button class="modal-x" aria-label="Close">✕</button></form></div>
+  <div class="modal-body">
+    <p><strong>Independent &amp; unofficial.</strong> OpenColor is an independent project. It is not
+    affiliated with, endorsed by, sponsored by, or connected to Datacolor or any color-standard or
+    paint manufacturer. It was built through independent interoperability research.</p>
+    <p><strong>Trademarks.</strong> All product, brand, and standard names are the property of their
+    respective owners and are used here for identification and compatibility reference only:</p>
+    <ul>
+      <li>“Datacolor” and “ColorReader” — Datacolor AG.</li>
+      <li>“Pantone”, “PMS” — Pantone LLC.</li>
+      <li>“RAL” — RAL gGmbH.</li>
+      <li>“NCS”, “Natural Color System” — NCS Colour AB.</li>
+      <li>“Munsell” — X-Rite / Munsell Color.</li>
+      <li>“Sherwin-Williams”, “Benjamin Moore”, “PPG”, “Dunn-Edwards”, “Caparol”, “Tikkurila”,
+      “Dulux”, “Lechler” — their respective owners.</li>
+    </ul>
+    <p><strong>Color data.</strong> CIELAB values are provided for reference and interoperability.
+    Some are published by their source; others are derived from published sRGB hex (each entry notes
+    which). Proprietary color specifications — including Pantone, RAL, and NCS — belong to their
+    owners; values shown are approximations and must not be treated as certified or authoritative
+    representations of those standards.</p>
+    <p><strong>No warranty.</strong> Provided “as is”, without warranty of any kind. Not intended for
+    color-critical, safety-critical, or certification use. You are responsible for verifying any
+    color decision against an official source.</p>
+    <p class="fine">Are you a rights holder with a concern? A takedown/contact channel can be added
+    here — see the site maintainer.</p>
+  </div>
+</dialog>
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
